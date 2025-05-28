@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { ExternalLink, MapPin, Star, Award } from 'lucide-react';
+import { ExternalLink, MapPin, Star, Award, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Portfolio = () => {
   const projects = [
@@ -61,24 +62,20 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-24 bg-white relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-ocean-100 to-ocean-200 rounded-full blur-3xl opacity-20 translate-x-48"></div>
-      
+    <section id="portfolio" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-20 animate-fade-in-up">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-ocean-100 text-ocean-700 text-sm font-medium mb-6">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-6">
             <Award className="w-4 h-4 mr-2" />
             Featured Projects
           </div>
-          <h2 className="text-5xl lg:text-6xl font-playfair font-bold text-ocean-900 mb-8">
-            Exceptional Pool
-            <span className="block text-ocean-gradient">Installations</span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            Award-Winning Pool Installations
           </h2>
-          <p className="text-xl text-platinum-600 max-w-4xl mx-auto leading-relaxed">
-            Explore our portfolio of exceptional pool installations that showcase our commitment 
-            to quality, innovation, and architectural excellence across California's finest properties.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our portfolio of exceptional pool installations showcasing our commitment 
+            to quality craftsmanship and innovative design across Southern California.
           </p>
         </div>
 
@@ -87,70 +84,80 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <div 
               key={project.id}
-              className="group relative overflow-hidden rounded-3xl bg-white shadow-corporate hover:shadow-luxury transition-all duration-700 animate-scale-in border border-platinum-200 hover:border-ocean-200"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:-translate-y-1"
             >
               <div className="aspect-[4/3] overflow-hidden relative">
                 <img 
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 
-                {/* Premium Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-ocean-900/90 via-ocean-800/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
                 {/* Value Badge */}
-                <div className="absolute top-4 right-4 bg-gradient-ocean text-white px-3 py-1 rounded-full text-sm font-semibold shadow-premium">
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                   {project.value}
                 </div>
                 
-                {/* Overlay Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <div className="flex items-center text-ocean-200 text-sm mb-2">
-                      <MapPin className="w-4 h-4 mr-1" />
-                      {project.location}
-                    </div>
-                    <h3 className="text-2xl font-playfair font-bold mb-3">{project.title}</h3>
-                    
-                    {/* Features */}
-                    <div className="space-y-1 mb-4">
-                      {project.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-ocean-200">
-                          <Star className="w-3 h-3 mr-2 text-yellow-400" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="bg-ocean-600/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
-                        {project.category}
-                      </span>
-                      <button className="bg-white/20 backdrop-blur-sm p-3 rounded-full hover:bg-white/30 transition-colors duration-300 group">
-                        <ExternalLink className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
+                {/* Category Badge */}
+                <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  {project.category}
                 </div>
+              </div>
+              
+              <div className="p-6">
+                <div className="flex items-center text-gray-500 text-sm mb-2">
+                  <MapPin className="w-4 h-4 mr-1" />
+                  {project.location}
+                </div>
+                
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{project.title}</h3>
+                
+                {/* Features */}
+                <div className="space-y-2 mb-4">
+                  {project.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-gray-600">
+                      <Star className="w-3 h-3 mr-2 text-blue-500" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                
+                <Button 
+                  variant="outline" 
+                  className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 group"
+                >
+                  View Details
+                  <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Button>
               </div>
             </div>
           ))}
         </div>
 
         {/* Enhanced View More Section */}
-        <div className="text-center animate-fade-in-up">
-          <div className="bg-gradient-platinum rounded-3xl p-12 shadow-corporate border border-platinum-200">
-            <h3 className="text-3xl font-playfair font-bold text-ocean-900 mb-4">
-              Explore Our Complete Portfolio
-            </h3>
-            <p className="text-platinum-600 mb-8 max-w-2xl mx-auto">
-              Discover over 500 completed projects showcasing our expertise in luxury pool construction and design excellence.
-            </p>
-            <button className="btn-premium bg-gradient-ocean text-white px-10 py-4 rounded-2xl font-semibold text-lg hover:shadow-glow transition-all duration-500 hover:scale-105 shadow-corporate">
-              View Complete Portfolio
-            </button>
+        <div className="bg-gray-50 rounded-2xl p-12 text-center border border-gray-200">
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">
+            Explore Our Complete Portfolio
+          </h3>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            View our complete collection of 500+ successfully completed projects and see why 
+            we're Southern California's most trusted pool construction company.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <Button 
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 font-semibold group"
+            >
+              View All Projects
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline" 
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 font-semibold"
+            >
+              Request Catalog
+            </Button>
           </div>
         </div>
       </div>

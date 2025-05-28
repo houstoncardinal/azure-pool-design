@@ -1,53 +1,50 @@
 
 import React from 'react';
-import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail, MapPin, Award, Star } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail, MapPin, Award, Star, Clock } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-ocean-950 via-ocean-900 to-ocean-950 text-white relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-ocean-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-ocean-400/10 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Enhanced Company Info */}
-          <div className="space-y-8">
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Main Footer Content */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Company Info */}
+          <div className="space-y-6">
             <div>
-              <h3 className="text-3xl font-playfair font-bold mb-4">
-                <span className="text-ocean-gradient">BluTouch</span> Pools
+              <h3 className="text-2xl font-bold mb-4">
+                <span className="text-blue-400">BluTouch</span> Pools
               </h3>
-              <p className="text-ocean-200 leading-relaxed mb-6">
-                Creating luxury aquatic experiences for over 25 years. Your premier partner 
-                for custom pool design and construction excellence.
+              <p className="text-gray-300 leading-relaxed mb-6">
+                Southern California's premier pool construction company. Creating luxury 
+                aquatic experiences with unmatched craftsmanship since 1998.
               </p>
               
-              {/* Premium Badges */}
-              <div className="flex flex-wrap gap-3 mb-6">
-                <div className="flex items-center bg-ocean-800/50 px-3 py-1 rounded-full text-sm">
-                  <Award className="w-4 h-4 mr-2 text-yellow-400" />
-                  Licensed
+              {/* Credentials */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex items-center bg-gray-800 px-3 py-1 rounded-full text-sm">
+                  <Award className="w-4 h-4 mr-2 text-blue-400" />
+                  Licensed #123456
                 </div>
-                <div className="flex items-center bg-ocean-800/50 px-3 py-1 rounded-full text-sm">
+                <div className="flex items-center bg-gray-800 px-3 py-1 rounded-full text-sm">
                   <Star className="w-4 h-4 mr-2 text-yellow-400" />
                   5-Star Rated
                 </div>
               </div>
             </div>
             
+            {/* Social Media */}
             <div className="flex space-x-4">
-              <a href="#" className="bg-ocean-800/50 p-3 rounded-2xl hover:bg-ocean-700/50 transition-all duration-300 hover:scale-110 shadow-corporate">
+              <a href="#" className="bg-gray-800 p-3 rounded-lg hover:bg-blue-600 transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-ocean-800/50 p-3 rounded-2xl hover:bg-ocean-700/50 transition-all duration-300 hover:scale-110 shadow-corporate">
+              <a href="#" className="bg-gray-800 p-3 rounded-lg hover:bg-blue-600 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-ocean-800/50 p-3 rounded-2xl hover:bg-ocean-700/50 transition-all duration-300 hover:scale-110 shadow-corporate">
+              <a href="#" className="bg-gray-800 p-3 rounded-lg hover:bg-blue-600 transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-ocean-800/50 p-3 rounded-2xl hover:bg-ocean-700/50 transition-all duration-300 hover:scale-110 shadow-corporate">
+              <a href="#" className="bg-gray-800 p-3 rounded-lg hover:bg-blue-600 transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -55,127 +52,97 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-xl font-semibold mb-8 font-playfair">Premium Services</h4>
-            <ul className="space-y-4 text-ocean-200">
-              <li><a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                <span className="w-2 h-2 bg-ocean-400 rounded-full mr-3 group-hover:bg-ocean-300 transition-colors"></span>
-                Custom Pool Design
-              </a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                <span className="w-2 h-2 bg-ocean-400 rounded-full mr-3 group-hover:bg-ocean-300 transition-colors"></span>
-                Luxury Pool Construction
-              </a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                <span className="w-2 h-2 bg-ocean-400 rounded-full mr-3 group-hover:bg-ocean-300 transition-colors"></span>
-                Pool Renovation & Remodeling
-              </a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                <span className="w-2 h-2 bg-ocean-400 rounded-full mr-3 group-hover:bg-ocean-300 transition-colors"></span>
-                Water Features & Spas
-              </a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                <span className="w-2 h-2 bg-ocean-400 rounded-full mr-3 group-hover:bg-ocean-300 transition-colors"></span>
-                Smart Pool Technology
-              </a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                <span className="w-2 h-2 bg-ocean-400 rounded-full mr-3 group-hover:bg-ocean-300 transition-colors"></span>
-                Maintenance & Service
-              </a></li>
+            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
+            <ul className="space-y-3 text-gray-300">
+              <li><a href="#" className="hover:text-white transition-colors">Custom Pool Design</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Pool Construction</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Pool Renovation</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Water Features & Spas</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Smart Pool Technology</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Maintenance & Service</a></li>
             </ul>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-semibold mb-8 font-playfair">Company</h4>
-            <ul className="space-y-4 text-ocean-200">
-              <li><a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                <span className="w-2 h-2 bg-ocean-400 rounded-full mr-3 group-hover:bg-ocean-300 transition-colors"></span>
-                About BluTouch
-              </a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                <span className="w-2 h-2 bg-ocean-400 rounded-full mr-3 group-hover:bg-ocean-300 transition-colors"></span>
-                Portfolio Gallery
-              </a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                <span className="w-2 h-2 bg-ocean-400 rounded-full mr-3 group-hover:bg-ocean-300 transition-colors"></span>
-                Client Testimonials
-              </a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                <span className="w-2 h-2 bg-ocean-400 rounded-full mr-3 group-hover:bg-ocean-300 transition-colors"></span>
-                Careers
-              </a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                <span className="w-2 h-2 bg-ocean-400 rounded-full mr-3 group-hover:bg-ocean-300 transition-colors"></span>
-                Industry Blog
-              </a></li>
-              <li><a href="#" className="hover:text-white transition-colors duration-300 flex items-center group">
-                <span className="w-2 h-2 bg-ocean-400 rounded-full mr-3 group-hover:bg-ocean-300 transition-colors"></span>
-                Contact Us
-              </a></li>
+            <h4 className="text-lg font-semibold mb-6">Company</h4>
+            <ul className="space-y-3 text-gray-300">
+              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Portfolio</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Testimonials</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
 
-          {/* Enhanced Contact */}
+          {/* Contact & CTA */}
           <div>
-            <h4 className="text-xl font-semibold mb-8 font-playfair">Get In Touch</h4>
-            <div className="space-y-6 text-ocean-200">
-              <div className="flex items-start space-x-4">
-                <div className="bg-ocean-800/50 p-2 rounded-lg">
-                  <Phone className="h-5 w-5 text-ocean-400" />
+            <h4 className="text-lg font-semibold mb-6">Get Started Today</h4>
+            
+            <div className="space-y-4 mb-6">
+              <div className="flex items-center space-x-3">
+                <div className="bg-blue-600 p-2 rounded-lg">
+                  <Phone className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="font-medium text-white">(555) 123-POOL</p>
-                  <p className="text-sm">24/7 Emergency Service</p>
+                  <p className="font-semibold">(555) 123-POOL</p>
+                  <p className="text-sm text-gray-400">24/7 Emergency Service</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="bg-ocean-800/50 p-2 rounded-lg">
-                  <Mail className="h-5 w-5 text-ocean-400" />
+              
+              <div className="flex items-center space-x-3">
+                <div className="bg-blue-600 p-2 rounded-lg">
+                  <Mail className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="font-medium text-white">info@blutouchpools.com</p>
-                  <p className="text-sm">Response within 2 hours</p>
+                  <p className="font-semibold">info@blutouchpools.com</p>
+                  <p className="text-sm text-gray-400">Response within 2 hours</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="bg-ocean-800/50 p-2 rounded-lg">
-                  <MapPin className="h-5 w-5 text-ocean-400" />
+              
+              <div className="flex items-center space-x-3">
+                <div className="bg-blue-600 p-2 rounded-lg">
+                  <MapPin className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="font-medium text-white">Los Angeles, CA</p>
-                  <p className="text-sm">Serving Southern California</p>
+                  <p className="font-semibold">Los Angeles, CA</p>
+                  <p className="text-sm text-gray-400">Serving all of SoCal</p>
                 </div>
+              </div>
+            </div>
+
+            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3">
+              Get Free Quote
+            </Button>
+            
+            <div className="mt-4 text-center">
+              <div className="flex items-center justify-center text-sm text-gray-400">
+                <Clock className="w-4 h-4 mr-2" />
+                Free consultation • No obligation
               </div>
             </div>
           </div>
         </div>
 
-        {/* Enhanced Bottom Bar */}
-        <div className="border-t border-ocean-800/50 mt-16 pt-10">
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
-              <p className="text-ocean-300 text-sm">
+              <p className="text-gray-400 text-sm">
                 © 2024 BluTouch Pools. All rights reserved.
               </p>
-              <div className="flex items-center space-x-4 text-sm text-ocean-400">
-                <span>Licensed #ABC123456</span>
+              <div className="flex items-center space-x-4 text-sm text-gray-500">
+                <span>Licensed & Bonded</span>
                 <span>•</span>
-                <span>Bonded & Insured</span>
+                <span>Fully Insured</span>
               </div>
             </div>
-            <div className="flex flex-wrap justify-center gap-6">
-              <a href="#" className="text-ocean-300 hover:text-white text-sm transition-colors duration-300">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-ocean-300 hover:text-white text-sm transition-colors duration-300">
-                Terms of Service
-              </a>
-              <a href="#" className="text-ocean-300 hover:text-white text-sm transition-colors duration-300">
-                Cookie Policy
-              </a>
-              <a href="#" className="text-ocean-300 hover:text-white text-sm transition-colors duration-300">
-                Accessibility
-              </a>
+            
+            <div className="flex flex-wrap justify-center gap-6 text-sm">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">Sitemap</a>
             </div>
           </div>
         </div>

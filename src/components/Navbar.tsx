@@ -25,23 +25,18 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full top-0 z-50 transition-all duration-500 ${
+    <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/95 backdrop-blur-xl shadow-luxury border-b border-platinum-200/50' 
-        : 'bg-transparent'
+        ? 'bg-white/95 backdrop-blur-sm shadow-lg border-b border-gray-200' 
+        : 'bg-white'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className={`text-2xl font-bold font-playfair transition-all duration-500 ${
-              isScrolled ? 'text-ocean-900' : 'text-white'
-            }`}>
-              <span className="relative">
-                BluTouch
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-ocean rounded-full"></span>
-              </span>
-              <span className="ml-2 font-light">Pools</span>
+            <h1 className="text-2xl font-bold text-gray-900">
+              <span className="text-blue-600">BluTouch</span>
+              <span className="ml-1 font-normal">Pools</span>
             </h1>
           </div>
 
@@ -52,23 +47,24 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg group ${
-                    isScrolled 
-                      ? 'text-ocean-900 hover:text-ocean-600 hover:bg-ocean-50' 
-                      : 'text-white hover:text-ocean-300 hover:bg-white/10'
-                  }`}
+                  className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-all duration-200 rounded-lg"
                 >
                   {item.name}
-                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-ocean-400 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Contact Button */}
-          <div className="hidden lg:block">
+          {/* Contact Buttons */}
+          <div className="hidden lg:flex items-center space-x-3">
             <Button 
-              className="btn-premium bg-gradient-ocean hover:shadow-glow text-white font-medium px-6 py-2.5 rounded-xl transition-all duration-300 hover:scale-105 shadow-corporate"
+              variant="outline"
+              className="border-blue-600 text-blue-600 hover:bg-blue-50 font-medium"
+            >
+              Free Quote
+            </Button>
+            <Button 
+              className="bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-lg"
             >
               <Phone className="w-4 h-4 mr-2" />
               Call Now
@@ -79,11 +75,7 @@ const Navbar = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`p-2 rounded-xl transition-all duration-300 ${
-                isScrolled 
-                  ? 'text-ocean-900 hover:bg-ocean-50' 
-                  : 'text-white hover:bg-white/10'
-              }`}
+              className="p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -92,22 +84,27 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 glass-morphism rounded-2xl mt-2 shadow-luxury border border-white/20">
+          <div className="lg:hidden border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-3 text-ocean-900 hover:text-ocean-600 hover:bg-ocean-50 transition-all duration-300 rounded-xl font-medium"
+                  className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <Button className="w-full mt-4 btn-premium bg-gradient-ocean hover:shadow-glow text-white rounded-xl py-3">
-                <Phone className="w-4 h-4 mr-2" />
-                Call Now
-              </Button>
+              <div className="pt-4 space-y-2">
+                <Button variant="outline" className="w-full border-blue-600 text-blue-600">
+                  Free Quote
+                </Button>
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Now
+                </Button>
+              </div>
             </div>
           </div>
         )}
