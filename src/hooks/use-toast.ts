@@ -1,3 +1,4 @@
+
 import * as React from "react"
 
 import type {
@@ -169,17 +170,23 @@ function toast({ ...props }: Toast) {
 }
 
 function useToast() {
-  const [state, setState] = React.useState<State>(memoryState)
+  // Add safety check to ensure React is properly initialized
+  const [state, setState] = React.useState<State>(() => {
+    console.log('Initializing toast state');
+    return memoryState;
+  })
 
   React.useEffect(() => {
+    console.log('Toast effect mounting');
     listeners.push(setState)
     return () => {
+      console.log('Toast effect unmounting');
       const index = listeners.indexOf(setState)
       if (index > -1) {
         listeners.splice(index, 1)
       }
     }
-  }, [state])
+  }, [])
 
   return {
     ...state,
