@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -71,8 +70,9 @@ const Navbar = () => {
             <Button 
               variant="outline"
               className="border-blue-600 text-blue-600 hover:bg-blue-50 font-medium"
+              asChild
             >
-              Free Quote
+              <Link to="/get-quote">Free Quote</Link>
             </Button>
             <Button 
               className="bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-lg"
@@ -119,8 +119,8 @@ const Navbar = () => {
                 )
               ))}
               <div className="pt-4 space-y-2">
-                <Button variant="outline" className="w-full border-blue-600 text-blue-600">
-                  Free Quote
+                <Button variant="outline" className="w-full border-blue-600 text-blue-600" asChild>
+                  <Link to="/get-quote">Free Quote</Link>
                 </Button>
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                   <Phone className="w-4 h-4 mr-2" />

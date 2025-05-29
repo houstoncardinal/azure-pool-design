@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { ExternalLink, MapPin, Star, Award, ArrowRight, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 
 const Portfolio = () => {
   const projects = [
@@ -112,9 +112,12 @@ const Portfolio = () => {
                 <Button 
                   variant="outline" 
                   className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 group"
+                  asChild
                 >
-                  View Details
-                  <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <a href={project.title === 'Brown Family Project' ? '/BrownFamilyProject' : '#'}>
+                    View Details
+                    <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </a>
                 </Button>
               </div>
             </div>
@@ -128,14 +131,31 @@ const Portfolio = () => {
             <p className="text-xl text-gray-600">What our satisfied customers are saying about Blu Touch Pools</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                <Quote className="w-8 h-8 text-blue-600 mb-4" />
-                <p className="text-gray-700 mb-4 italic">"{testimonial.review}"</p>
-                <p className="font-semibold text-gray-900">- {testimonial.name}</p>
-              </div>
-            ))}
+          {/* Carousel for Testimonials - Full Width & Responsive */}
+          <div className="relative w-full px-0 sm:px-4 md:px-8 lg:px-0">
+            <Carousel opts={{ loop: true, align: 'center' }}>
+              <CarouselContent className="gap-6 md:gap-8">
+                {testimonials.map((testimonial, index) => (
+                  <CarouselItem
+                    key={index}
+                    className="px-2 sm:px-4 md:px-6 lg:px-8 basis-full md:basis-1/2 lg:basis-1/3 flex justify-center"
+                  >
+                    <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 md:p-8 border border-gray-200 shadow-lg flex flex-col items-center w-full h-full max-w-md transition-all duration-500 ease-in-out">
+                      <Quote className="w-8 h-8 text-blue-600 mb-4" />
+                      <div className="flex mb-2">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400 mr-1" />
+                        ))}
+                      </div>
+                      <p className="text-gray-700 mb-4 italic text-center">"{testimonial.review}"</p>
+                      <p className="font-semibold text-gray-900">- {testimonial.name}</p>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
 

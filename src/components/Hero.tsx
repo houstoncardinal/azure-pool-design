@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { ArrowRight, Phone, Calendar, CheckCircle, Award, Users, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -66,9 +66,12 @@ const Hero = () => {
                 variant="outline" 
                 size="lg" 
                 className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg group"
+                asChild
               >
-                <Calendar className="mr-2 h-5 w-5" />
-                Free Consultation
+                <Link to="/get-quote">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Free Consultation
+                </Link>
               </Button>
             </div>
 

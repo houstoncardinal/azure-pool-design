@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Facebook, Instagram, Phone, Mail, MapPin, Award, Star, Clock, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -99,8 +99,8 @@ const Footer = () => {
               </div>
             </div>
 
-            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 mb-4">
-              Get Free Estimate
+            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 mb-4" asChild>
+              <Link to="/get-quote">Get Free Estimate</Link>
             </Button>
             
             {/* Financing */}
