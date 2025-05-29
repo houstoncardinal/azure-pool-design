@@ -14,11 +14,9 @@ const Footer = () => {
             <div>
               {/* Logo */}
               <Link to="/">
-                <img 
-                  src="/blutouch-logo.png" 
-                  alt="Blu Touch Pools Logo"
-                  className="h-12 w-auto mb-4"
-                />
+                <h3 className="text-2xl font-bold mb-4">
+                  <span className="text-blue-400">Blu Touch</span> Pools
+                </h3>
               </Link>
               <p className="text-gray-300 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6">
                 Houston's Premier Custom Pool Builder. Blu Touch Pools has an amazing team of designers, technicians, and craftsmen that will guide you through the process of creating your own luxury pool design.
