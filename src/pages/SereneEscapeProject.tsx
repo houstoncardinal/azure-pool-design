@@ -21,30 +21,33 @@ import { Link } from 'react-router-dom';
 
 const SereneEscapeProject = () => {
   const project = {
-    title: "Serene Escape Project",
-    subtitle: "Tranquil Backyard Pool in Richmond, TX",
-    description: "This project created a serene backyard escape in Richmond with a beautifully designed pool focused on relaxation and ambiance. It includes a cascading waterfall, subtle lighting, and comfortable seating areas, perfect for unwinding and enjoying quiet moments.",
-    location: "Richmond, TX",
-    category: "Relaxation Pool, Ambiance Focused",
-    size: "Approx. 14,000 Gallons", // Placeholder size
+    id: 'serene-escape-project',
+    title: 'Serene Escape Project',
+    subtitle: 'A Peaceful Backyard Oasis',
+    description: 'Creating a peaceful and serene backyard oasis was the goal for the Serene Escape project. This design features a freeform pool, natural stone coping, and careful landscaping to provide a tranquil and private retreat.',
+    location: 'Pearland, TX',
+    category: 'Freeform Pool, Natural Stone',
+    size: 'Approx. 16,000 Gallons',
     features: [
-      "Cascading Waterfall Feature",
-      "Integrated Ambient Lighting",
-      "Comfortable Seating Nooks",
-      "Natural Stone Accents",
-      "Low-Maintenance Landscaping"
+      'Freeform Pool Shape',
+      'Natural Stone Coping',
+      'Integrated Spa (optional)',
+      'Lush, Low-Maintenance Landscaping',
+      'Subtle Water Features',
+      'Warm Lighting Scheme'
     ],
     benefits: [
-      "Peaceful & Relaxing Atmosphere",
-      "Beautiful Evening Ambiance",
-      "Ideal for Unwinding",
-      "Aesthetic Appeal",
-      "Easy to Maintain"
+      'Tranquil and Relaxing Atmosphere',
+      'Blends with Natural Surroundings',
+      'Ideal for Relaxation',
+      'Easy to Maintain',
+      'Enhanced Ambiance',
+      'Inviting for Evening Use'
     ],
     images: [
-      "https://images.unsplash.com/photo-1586027652881-e682d0396b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 1
-      "https://images.unsplash.com/photo-1586027652881-e682d0396b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 2
-      "https://images.unsplash.com/photo-1586027652881-e682d0396b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 3
+      '/serene-escape-pool.jpg',
+      'https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
+      'https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
     ]
   };
 

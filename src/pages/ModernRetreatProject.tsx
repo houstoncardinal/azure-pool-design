@@ -21,30 +21,33 @@ import { Link } from 'react-router-dom';
 
 const ModernRetreatProject = () => {
   const project = {
-    title: "Modern Retreat Project",
-    subtitle: "Sleek Lap Pool Design in The Woodlands, TX",
-    description: "This project focuses on a modern lap pool design for a client in The Woodlands. The design emphasizes clean lines, functional use for swimming laps, and a minimalist aesthetic that complements the home's architecture. Features include an automatic pool cover and energy-efficient heating.",
-    location: "The Woodlands, TX",
-    category: "Lap Pool, Modern Design",
-    size: "Approx. 10,000 Gallons", // Placeholder size
+    id: 'modern-retreat-project',
+    title: 'Modern Retreat Project',
+    subtitle: 'Clean Lines and Minimalist Design',
+    description: 'A tranquil and modern retreat designed with clean lines and a minimalist aesthetic. This project focuses on creating a serene escape with a beautifully designed swimming pool that complements the modern architecture of the home.',
+    location: 'Houston, TX',
+    category: 'Modern Design, Minimalist Pool',
+    size: 'Approx. 10,000 Gallons',
     features: [
-      "Rectangular Lap Pool Shape",
-      "Automatic Pool Cover",
-      "Energy-Efficient Heater",
-      "Minimalist Decking",
-      "Integrated Lighting"
+      'Rectangular Pool Shape',
+      'Full-Width Entry Steps',
+      'Sheer Descent Waterfalls',
+      'Clean Concrete Decking',
+      'Energy-Efficient Pump',
+      'Minimalist Coping'
     ],
     benefits: [
-      "Ideal for Exercise",
-      "Reduced Maintenance with Cover",
-      "Lower Heating Costs",
-      "Seamless Modern Aesthetic",
-      "Extended Swimming Season"
+      'Contemporary Look',
+      'Easy Access',
+      'Soothing Water Sounds',
+      'Spacious Sundeck Area',
+      'Lower Operating Costs',
+      'Seamless Integration'
     ],
     images: [
-      "https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 1
-      "https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 2
-      "https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 3
+      '/modern-retreat-pool.jpg',
+      'https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
+      'https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
     ]
   };
 

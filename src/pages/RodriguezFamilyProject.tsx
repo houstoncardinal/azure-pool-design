@@ -21,30 +21,33 @@ import { Link } from 'react-router-dom';
 
 const RodriguezFamilyProject = () => {
   const project = {
-    title: "Rodriguez Family Project",
-    subtitle: "Modern Geometric Pool in Katy, TX",
-    description: "A sleek and modern geometric pool designed for the Rodriguez family in Katy. This project emphasizes clean lines, minimalist aesthetics, and integrated smart technology for easy maintenance and control. The design includes a large sun shelf and a tranquil water feature.",
-    location: "Katy, TX",
-    category: "Modern Pool Design",
-    size: "Approx. 12,000 Gallons", // Placeholder size
+    id: 'rodriguez-family-project',
+    title: 'Rodriguez Family Project',
+    subtitle: 'Luxury Geometric Pool with Extensive Decking',
+    description: 'A luxurious geometric pool designed for the Rodriguez family, featuring clean lines, a spacious sun shelf, and extensive high-quality paver decking. This project emphasizes modern elegance and ample space for relaxation and entertainment.',
+    location: 'Alvin, TX',
+    category: 'Luxury Geometric Pool, Paver Decking',
+    size: 'Approx. 20,000 Gallons',
     features: [
-      "Geometric Pool Shape",
-      "Large Sun Shelf",
-      "Integrated Water Feature",
-      "Smart Automation System",
-      "Modern Coping & Tile"
+      'Geometric Pool Design',
+      'Large Sun Shelf',
+      'High-Quality Paver Decking',
+      'Waterfall Feature',
+      'Integrated Lighting',
+      'Automated Cleaning'
     ],
     benefits: [
-      "Contemporary Backyard Look",
-      "Relaxing Sun Shelf Area",
-      "Easy Maintenance",
-      "Automated Control",
-      "Durable Construction"
+      'Modern Aesthetic',
+      'Ample Relaxation Space',
+      'Durable and Stylish Decking',
+      'Soothing Water Sounds',
+      'Enhanced Evening Ambiance',
+      'Easy Maintenance'
     ],
     images: [
-      "https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 1
-      "https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 2
-      "https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 3
+      '/rodriguez-family-pool.jpg',
+      'https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
+      'https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
     ]
   };
 

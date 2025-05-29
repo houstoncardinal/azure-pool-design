@@ -21,30 +21,33 @@ import { Link } from 'react-router-dom';
 
 const CoastalOasisProject = () => {
   const project = {
-    title: "Coastal Oasis Project",
-    subtitle: "Lagoon-Style Pool in Galveston, TX",
-    description: "This project transformed a backyard into a coastal oasis with a freeform lagoon-style pool. Designed to blend seamlessly with the natural surroundings, it features natural rock waterfalls, lush landscaping, and a tanning ledge, creating a serene and relaxing retreat.",
-    location: "Galveston, TX",
-    category: "Lagoon Pool, Natural Design",
-    size: "Approx. 20,000 Gallons", // Placeholder size
+    id: 'coastal-oasis-project',
+    title: 'Coastal Oasis Project',
+    subtitle: 'Resort-Style Pool with Rock Features',
+    description: 'Inspired by coastal landscapes, this resort-style pool for the Coastal Oasis project features natural rock formations, a waterfall, and lush tropical landscaping. It creates a serene and immersive backyard escape.',
+    location: 'Friendswood, TX',
+    category: 'Resort-Style Pool, Rock Features, Landscaping',
+    size: 'Approx. 25,000 Gallons',
     features: [
-      "Freeform Lagoon Shape",
-      "Natural Rock Waterfalls",
-      "Integrated Tanning Ledge",
-      "Custom Rock Coping",
-      "Lush Tropical Landscaping"
+      'Natural Rock Waterfalls',
+      'Integrated Grotto',
+      'Tropical Landscaping',
+      'Large Sun Shelf',
+      'Pebble Tec Finish',
+      'Custom Lighting'
     ],
     benefits: [
-      "Natural & Relaxing Environment",
-      "Seamless Integration with Landscape",
-      "Perfect for Sunbathing",
-      "Durable & Aesthetic Materials",
-      "Increased Property Value"
+      'Immersive Natural Aesthetic',
+      'Relaxing Waterfall Sounds',
+      'Tropical Ambiance',
+      'Ideal for Lounging',
+      'Durable and Beautiful Finish',
+      'Enhanced Evening Atmosphere'
     ],
     images: [
-      "https://images.unsplash.com/photo-1586027652881-e682d0396b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 1
-      "https://images.unsplash.com/photo-1586027652881-e682d0396b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 2
-      "https://images.unsplash.com/photo-1586027652881-e682d0396b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 3
+      '/coastal-oasis-pool.jpg',
+      'https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
+      'https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
     ]
   };
 

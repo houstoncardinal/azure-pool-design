@@ -21,30 +21,33 @@ import { Link } from 'react-router-dom';
 
 const WhiteFamilyProject = () => {
   const project = {
-    title: "White Family Project",
-    subtitle: "Comprehensive Pool Renovation in Sugar Land",
-    description: "This project involved a complete renovation of an existing pool for the White family. We updated the pool's surface, replaced the tile, upgraded the equipment for better efficiency, and refreshed the surrounding patio area to give their backyard a modern and inviting look.",
-    location: "Sugar Land, TX",
-    category: "Pool Renovation",
-    size: "Approx. 15,000 Gallons", // Placeholder size
+    id: 'white-family-project',
+    title: 'White Family Project',
+    subtitle: 'Modern Pool Design with Smart Features',
+    description: 'A sleek and modern pool design for the White family, featuring integrated smart technology for easy control and maintenance. Clean lines and minimalist aesthetics create a sophisticated backyard retreat.',
+    location: 'Houston, TX',
+    category: 'Modern Pool Design, Smart Features',
+    size: 'Approx. 15,000 Gallons',
     features: [
-      "Pool Resurfacing",
-      "Full Tile Replacement",
-      "Energy-Efficient Equipment Upgrade",
-      "Patio Deck Refresh",
-      "Updated Lighting"
+      'Integrated Smart Control System',
+      'Energy-Efficient Filtration',
+      'Automated Cleaning System',
+      'LED Perimeter Lighting',
+      'Infinity Edge Detail',
+      'Porcelain Tile Finish'
     ],
     benefits: [
-      "Extended Pool Lifespan",
-      "Improved Aesthetics",
-      "Lower Energy Bills",
-      "Enhanced Safety",
-      "Increased Property Value"
+      'Effortless Pool Management',
+      'Reduced Energy Costs',
+      'Minimal Maintenance',
+      'Enhanced Evening Ambiance',
+      'Stunning Visual Appeal',
+      'Durable and Easy to Clean Surface'
     ],
     images: [
-      "https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 1
-      "https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 2
-      "https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 3
+      '/white-family-pool.jpg',
+      'https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
+      'https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
     ]
   };
 
