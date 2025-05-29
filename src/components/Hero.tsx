@@ -17,39 +17,38 @@ const Hero = () => {
             {/* Corporate Badge */}
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-semibold mb-8">
               <Award className="w-4 h-4 mr-2" />
-              Industry Leader Since 1998
+              Houston's Premier Custom Pool Builder
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Premium Pool
-              <span className="block text-blue-600">Construction</span>
+              Experience The
+              <span className="block text-blue-600">Blu Touch</span>
               <span className="block text-2xl lg:text-3xl font-normal text-gray-600 mt-4">
-                & Design Excellence
+                Difference
               </span>
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
-              Transform your property with professionally designed and constructed pools. 
-              <strong className="text-gray-900"> Trusted by 500+ satisfied clients</strong> across Southern California.
+              Blu Touch Pools has an amazing team of designers, technicians, and craftsmen that will guide you through the process of creating your own luxury pool design. We strive to reflect the dream of each client in the pools we build from a custom in-ground pool to an in-ground pool with a hot tub!
             </p>
 
             {/* Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
               <div className="flex items-center text-gray-700">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                <span className="font-medium">Licensed & Insured</span>
+                <span className="font-medium">Free Estimates</span>
               </div>
               <div className="flex items-center text-gray-700">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                <span className="font-medium">12-Month Warranty</span>
+                <span className="font-medium">3-D Reality View</span>
               </div>
               <div className="flex items-center text-gray-700">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                <span className="font-medium">Premium Materials</span>
+                <span className="font-medium">Personal Consultations</span>
               </div>
               <div className="flex items-center text-gray-700">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                <span className="font-medium">Expert Installation</span>
+                <span className="font-medium">Custom Designs</span>
               </div>
             </div>
             
@@ -60,7 +59,7 @@ const Hero = () => {
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Call (555) 123-POOL
+                Call (832) 961-0258
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
               <Button 
@@ -73,20 +72,10 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 mb-1">25+</div>
-                <div className="text-sm text-gray-600 font-medium">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 mb-1">500+</div>
-                <div className="text-sm text-gray-600 font-medium">Happy Clients</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 mb-1">5★</div>
-                <div className="text-sm text-gray-600 font-medium">Average Rating</div>
-              </div>
+            {/* Service Areas */}
+            <div className="pt-8 border-t border-gray-200">
+              <p className="text-gray-600 font-medium mb-2">Serving:</p>
+              <p className="text-gray-700">Pearland, Alvin, Friendswood, Houston and surrounding areas</p>
             </div>
           </div>
 
@@ -99,7 +88,7 @@ const Hero = () => {
                 className="w-full h-64 object-cover rounded-xl mb-6"
               />
               
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Why Choose BluTouch Pools?</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Why Choose Blu Touch Pools?</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -107,8 +96,8 @@ const Hero = () => {
                     <Award className="w-4 h-4 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Award-Winning Design</h4>
-                    <p className="text-gray-600 text-sm">Recognized excellence in pool construction and design innovation.</p>
+                    <h4 className="font-semibold text-gray-900">Custom Pool & Spa Design</h4>
+                    <p className="text-gray-600 text-sm">No matter the size of your backyard, we can create a luxury pool design that fits perfectly.</p>
                   </div>
                 </div>
                 
@@ -118,7 +107,7 @@ const Hero = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Expert Team</h4>
-                    <p className="text-gray-600 text-sm">Certified professionals with decades of combined experience.</p>
+                    <p className="text-gray-600 text-sm">Amazing team of designers, technicians, and craftsmen guiding you through the process.</p>
                   </div>
                 </div>
                 
@@ -127,8 +116,8 @@ const Hero = () => {
                     <Star className="w-4 h-4 text-yellow-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">5-Star Service</h4>
-                    <p className="text-gray-600 text-sm">Consistently rated excellent by our satisfied customers.</p>
+                    <h4 className="font-semibold text-gray-900">Pool Servicing</h4>
+                    <p className="text-gray-600 text-sm">Specializing in routine maintenance, repairs, and equipment service in Fort Bend County.</p>
                   </div>
                 </div>
               </div>

@@ -1,63 +1,56 @@
 
 import React from 'react';
-import { ExternalLink, MapPin, Star, Award, ArrowRight } from 'lucide-react';
+import { ExternalLink, MapPin, Star, Award, ArrowRight, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "Modern Infinity Pool",
-      location: "Beverly Hills, CA",
+      title: "Brown Family Project",
+      location: "Houston, TX",
       image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Luxury Residential",
-      value: "$250K+",
-      features: ["Infinity Edge", "Smart Lighting", "Automated Systems"]
+      category: "Custom Pool & Spa",
+      features: ["In-Ground Pool", "Hot Tub Integration", "Modern Design"]
     },
     {
       id: 2,
-      title: "Resort-Style Oasis",
-      location: "Malibu, CA",
+      title: "Robinson Family Project",
+      location: "Pearland, TX",
       image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Custom Design",
-      value: "$180K+",
-      features: ["Natural Stone", "Waterfall Feature", "Spa Integration"]
+      category: "Luxury Pool",
+      features: ["Custom Design", "3-D Planning", "Premium Finishes"]
     },
     {
       id: 3,
-      title: "Geometric Paradise",
-      location: "Newport Beach, CA",
+      title: "Rucker Family Project",
+      location: "Friendswood, TX",
       image: "https://images.unsplash.com/photo-1562778612-e1e0cda9915c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Contemporary",
-      value: "$320K+",
-      features: ["Geometric Design", "LED Integration", "Premium Finishes"]
+      category: "Backyard Oasis",
+      features: ["Modern Pool", "Landscape Integration", "Entertainment Space"]
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Jeremy B.",
+      review: "Great service and response. Blue Touch Pools was able to work with my budget on building the pool of my dreams. My project was completed in 60 days! Great service and response by Gary and my project manager on the job!"
     },
     {
-      id: 4,
-      title: "Natural Rock Formation",
-      location: "Laguna Beach, CA",
-      image: "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Natural Design",
-      value: "$275K+",
-      features: ["Natural Boulder", "Grotto Design", "Tropical Landscaping"]
+      name: "Luke M.",
+      review: "Responsive, reliable, and friendly. Gary and his team are responsive, reliable, and friendly. He has been taking care of my pool for years. I love that they send me a text each week explaining what they did for service and send pictures!"
     },
     {
-      id: 5,
-      title: "Rooftop Sanctuary",
-      location: "Manhattan Beach, CA",
-      image: "https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Urban Living",
-      value: "$400K+",
-      features: ["Rooftop Installation", "City Views", "Wind Resistance"]
+      name: "Jarett L.",
+      review: "Wouldn't consider going anywhere else. I've used blue touch pool service for years now and love every bit of it. I never have to worry if my pool will be clean as they come every week at the same time. Wouldn't consider going anywhere else."
     },
     {
-      id: 6,
-      title: "Family Entertainment Hub",
-      location: "Palos Verdes, CA",
-      image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Family Friendly",
-      value: "$195K+",
-      features: ["Safety Features", "Play Areas", "Energy Efficient"]
+      name: "Chelsea L.",
+      review: "Top notch business. Blu Touch Pool Service is a top notch business. If you are looking for a detailed, customer service-oriented company definitely go with Blu Touch. They also build pools if you need one."
+    },
+    {
+      name: "Lori M.",
+      review: "Professional and courteous. The Blu Touch team are professional and courteous. They are dependable and always do a great job cleaning our pool. We have used them for several years and are very pleased with their service."
     }
   ];
 
@@ -68,19 +61,18 @@ const Portfolio = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-6">
             <Award className="w-4 h-4 mr-2" />
-            Featured Projects
+            Client Projects
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Award-Winning Pool Installations
+            Our Featured Projects
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore our portfolio of exceptional pool installations showcasing our commitment 
-            to quality craftsmanship and innovative design across Southern California.
+            No matter the size of your backyard, we can create a luxury pool and hot tub design that will shape perfectly to fit. Here are some of our recent client projects.
           </p>
         </div>
 
         {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
           {projects.map((project, index) => (
             <div 
               key={project.id}
@@ -92,11 +84,6 @@ const Portfolio = () => {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
-                
-                {/* Value Badge */}
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-gray-900 px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
-                  {project.value}
-                </div>
                 
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -134,21 +121,38 @@ const Portfolio = () => {
           ))}
         </div>
 
+        {/* Client Testimonials Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Client Testimonials</h3>
+            <p className="text-xl text-gray-600">What our satisfied customers are saying about Blu Touch Pools</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+                <Quote className="w-8 h-8 text-blue-600 mb-4" />
+                <p className="text-gray-700 mb-4 italic">"{testimonial.review}"</p>
+                <p className="font-semibold text-gray-900">- {testimonial.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Enhanced View More Section */}
         <div className="bg-gray-50 rounded-2xl p-12 text-center border border-gray-200">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">
-            Explore Our Complete Portfolio
+            Start Your Pool Project Today
           </h3>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            View our complete collection of 500+ successfully completed projects and see why 
-            we're Southern California's most trusted pool construction company.
+            We love hearing from our community. For general questions, concerns & information - contact Blu Touch Pools now! Give us the opportunity to service your swimming pool and we will prove why we are the best pool service company around.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Button 
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 font-semibold group"
             >
-              View All Projects
+              Contact Us Today
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button 
@@ -156,7 +160,7 @@ const Portfolio = () => {
               variant="outline" 
               className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 font-semibold"
             >
-              Request Catalog
+              Free Estimate
             </Button>
           </div>
         </div>

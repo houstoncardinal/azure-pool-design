@@ -8,45 +8,45 @@ const Services = () => {
   const services = [
     {
       icon: Waves,
-      title: "Custom Pool Design",
-      description: "Bespoke pool designs tailored to your vision with 3D visualization and architectural integration.",
-      features: ["3D Design Visualization", "Site Analysis", "Permit Assistance"],
-      price: "Starting at $15K"
+      title: "Custom Pools & Spas",
+      description: "No matter the size of your backyard, we can create a luxury pool and hot tub design that will shape perfectly to fit. We offer estimates which include personal consultations and a 3-D reality view of your new swimming pool.",
+      features: ["3-D Reality View", "Personal Consultations", "Custom In-Ground Pools"],
+      price: "Free Estimates"
     },
     {
       icon: Wrench,
-      title: "Pool Construction",
-      description: "Expert construction using premium materials and industry-leading techniques for lasting quality.",
-      features: ["Gunite Construction", "Premium Finishes", "Equipment Installation"],
-      price: "From $45K"
+      title: "Upgrades & Repairs",
+      description: "With a strong commitment to provide first-rate service & support to our customers, Blu Touch Pool Service offers a variety of services and repairs to fit every customer's needs and to fit their budget.",
+      features: ["Equipment Repair", "Budget-Friendly Options", "First-Rate Service"],
+      price: "Competitive Rates"
     },
     {
       icon: Sparkles,
-      title: "Luxury Features",
-      description: "Transform your pool with premium amenities including lighting, water features, and automation.",
-      features: ["LED Lighting Systems", "Water Features", "Smart Automation"],
-      price: "From $8K"
+      title: "Pool Servicing",
+      description: "Blu Touch Pool Service specializes in routine pool maintenance, Drain & Fills, equipment repair of swimming pools in Fort Bend County and surrounding areas.",
+      features: ["Routine Maintenance", "Drain & Fills", "Equipment Repair"],
+      price: "Weekly Service"
     },
     {
       icon: Shield,
-      title: "Pool Renovation",
-      description: "Modernize and upgrade existing pools with comprehensive renovation services.",
-      features: ["Surface Resurfacing", "Equipment Upgrades", "Feature Addition"],
-      price: "From $12K"
+      title: "Modern Pool Designs",
+      description: "Modern pools and designs to bring your backyard oasis to life. We strive to reflect the dream of each client in the pools we build.",
+      features: ["Backyard Oasis", "Modern Designs", "Dream Reflection"],
+      price: "Custom Pricing"
     },
     {
       icon: Droplets,
-      title: "Water Features & Spas",
-      description: "Custom waterfalls, fountains, and spa installations for ultimate relaxation.",
-      features: ["Natural Waterfalls", "Spillover Spas", "Fountain Systems"],
-      price: "From $6K"
+      title: "Hot Tub Integration",
+      description: "From custom in-ground pools to in-ground pools with hot tubs, we create luxury designs that perfectly complement your outdoor space.",
+      features: ["Hot Tub Integration", "Luxury Designs", "Perfect Fit"],
+      price: "From $25K"
     },
     {
       icon: Zap,
-      title: "Smart Technology",
-      description: "Integrate cutting-edge technology for effortless pool management and energy efficiency.",
-      features: ["Remote Monitoring", "Automated Systems", "Energy Optimization"],
-      price: "From $4K"
+      title: "Professional Installation",
+      description: "Our amazing team of designers, technicians, and craftsmen guide you through the entire process of creating your luxury pool design.",
+      features: ["Expert Installation", "Professional Team", "Complete Guidance"],
+      price: "Included"
     }
   ];
 
@@ -60,11 +60,10 @@ const Services = () => {
             Professional Services
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Comprehensive Pool Solutions
+            Experience The Blu Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From initial design to final installation, we provide complete pool construction 
-            and renovation services with transparent pricing and guaranteed satisfaction.
+            Modern pools and designs to bring your backyard oasis to life. We strive to reflect the dream of each client in the pools we build from a custom in-ground pool to an in-ground pool with a hot tub!
           </p>
         </div>
 
@@ -102,7 +101,7 @@ const Services = () => {
                   <div className="border-t border-gray-100 pt-6">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-gray-900">{service.price}</span>
-                      <span className="text-sm text-gray-500">Professional installation</span>
+                      <span className="text-sm text-gray-500">Professional service</span>
                     </div>
                     
                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium">
@@ -121,8 +120,7 @@ const Services = () => {
             Ready to Start Your Pool Project?
           </h3>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Get a free consultation with our pool experts. We'll assess your space, 
-            discuss your vision, and provide a detailed project proposal.
+            We offer free estimates which include personal consultations and a 3-D reality view of your new swimming pool. Give us the opportunity to service your swimming pool and we will prove why we are the best pool service company around.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Button 
@@ -130,7 +128,7 @@ const Services = () => {
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 font-semibold group"
             >
               <Phone className="mr-2 h-5 w-5" />
-              Call (555) 123-POOL
+              Call (832) 961-0258
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button 
@@ -138,12 +136,12 @@ const Services = () => {
               variant="outline" 
               className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 font-semibold"
             >
-              Schedule Consultation
+              Free Consultation & 3-D View
             </Button>
           </div>
           
           <div className="mt-8 text-sm text-gray-500">
-            ✓ Free consultation ✓ No obligation ✓ Licensed & insured
+            ✓ Free consultation ✓ Personal consultation ✓ 3-D reality view
           </div>
         </div>
       </div>
