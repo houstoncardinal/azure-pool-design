@@ -16,6 +16,7 @@ import RodriguezFamilyProject from './pages/RodriguezFamilyProject';
 import CoastalOasisProject from './pages/CoastalOasisProject';
 import ModernRetreatProject from './pages/ModernRetreatProject';
 import SereneEscapeProject from './pages/SereneEscapeProject';
+import Portfolio from './pages/Portfolio';
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/get-quote" element={<GetQuote />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/brown-family-project" element={<BrownFamilyProject />} />
           <Route path="/portfolio/white-family-project" element={<WhiteFamilyProject />} />
           <Route path="/portfolio/rodriguez-family-project" element={<RodriguezFamilyProject />} />
