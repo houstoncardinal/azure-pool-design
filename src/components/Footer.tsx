@@ -107,9 +107,11 @@ const Footer = () => {
             <div className="bg-gray-800 rounded-lg p-4">
               <h5 className="font-semibold mb-2">Financing Available</h5>
               <p className="text-sm text-gray-300 mb-3">Apply now through HFS Financial</p>
-              <Button variant="outline" size="sm" className="w-full border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Apply Now
+              <Button variant="outline" size="sm" className="w-full border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white" asChild>
+                <a href="https://www.hfsfinancial.net/promo/blutouchpoolservice/" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Apply Now
+                </a>
               </Button>
             </div>
           </div>

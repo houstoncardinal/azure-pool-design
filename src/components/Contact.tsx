@@ -243,9 +243,12 @@ const Contact = () => {
               </p>
               <Button 
                 className="w-full bg-gray-900 hover:bg-gray-800 text-white font-semibold py-2 sm:py-3 rounded-lg sm:rounded-xl transition-all duration-300 text-sm sm:text-base"
+                asChild
               >
-                <ExternalLink className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
-                Apply for Financing
+                <a href="https://www.hfsfinancial.net/promo/blutouchpoolservice/" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                  Apply for Financing
+                </a>
               </Button>
             </div>
           </div>
