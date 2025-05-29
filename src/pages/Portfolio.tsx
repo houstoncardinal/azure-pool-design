@@ -7,47 +7,68 @@ import { Sparkles } from 'lucide-react';
 // Placeholder data for portfolio projects
 const projects = [
   {
-    id: 'brown-family-project',
-    title: 'Brown Family Project',
-    location: 'Pearland, TX',
-    image: '/brown-family-pool.jpg',
-    description: 'A stunning custom pool and spa built for the Brown family.'
+    id: 'johnson-family-project',
+    title: 'Johnson Family Project',
+    location: 'Houston, TX',
+    image: '/johnson-family-pool.jpg',
+    description: 'A stunning custom pool and spa built for the Johnson family.'
   },
   {
-    id: 'white-family-project',
-    title: 'White Family Project',
-    location: 'Houston, TX',
-    image: '/white-family-pool.jpg',
+    id: 'phillips-family-project',
+    title: 'Phillips Family Project',
+    location: 'Pearland, TX',
+    image: '/phillips-family-pool.jpg',
     description: 'Modern pool design with integrated smart features.'
   },
   {
-    id: 'rodriguez-family-project',
-    title: 'Rodriguez Family Project',
+    id: 'kieselhorst-family-project',
+    title: 'Kieselhorst Family Project',
     location: 'Alvin, TX',
-    image: '/rodriguez-family-pool.jpg',
+    image: '/kieselhorst-family-pool.jpg',
     description: 'Luxury geometric pool with extensive decking.'
   },
   {
-    id: 'coastal-oasis-project',
-    title: 'Coastal Oasis Project',
+    id: 'brown-family-project',
+    title: 'Brown Family Project',
     location: 'Friendswood, TX',
-    image: '/coastal-oasis-pool.jpg',
+    image: '/brown-family-pool.jpg',
     description: 'Resort-style pool with rock features and lush landscaping.'
   },
   {
-    id: 'modern-retreat-project',
-    title: 'Modern Retreat Project',
+    id: 'robinson-family-project',
+    title: 'Robinson Family Project',
     location: 'Houston, TX',
-    image: '/modern-retreat-pool.jpg',
-    description: 'Clean lines and minimalist design for a tranquil escape.'
+    image: '/robinson-pool.jpg',
+    description: 'A modern pool design for the Robinson family, featuring a seamless integration with their outdoor living space.'
   },
   {
-    id: 'serene-escape-project',
-    title: 'Serene Escape Project',
-    location: 'Pearland, TX',
-    image: '/serene-escape-pool.jpg',
-    description: 'A peaceful backyard oasis with a beautiful swimming pool.'
+    id: 'rucker-family-project',
+    title: 'Rucker Family Project',
+    location: 'Friendswood, TX',
+    image: '/rucker-family.jpg',
+    description: 'A stunning pool and spa combination for the Rucker family, featuring premium materials and sophisticated design elements.'
   },
+  {
+    id: 'jennings-family-project',
+    title: 'Jennings Family Project',
+    location: 'Pearland, TX',
+    image: '/jennings-family-pool.jpg',
+    description: 'A perfect family pool design for the Jennings family, featuring a spacious layout, safety features, and fun elements.'
+  },
+  {
+    id: 'tems-family-project',
+    title: 'Tems Family Project',
+    location: 'Houston, TX',
+    image: '/tems-family-pool.jpg',
+    description: 'A sophisticated pool design for the Tems family, featuring modern aesthetics and seamless integration with their outdoor living space.'
+  },
+  {
+    id: 'myer-family-project',
+    title: 'Myer Family Project',
+    location: 'Alvin, TX',
+    image: '/myer-family-pool.jpg',
+    description: 'An exceptional pool design for the Myer family, featuring premium materials and sophisticated entertainment features.'
+  }
 ];
 
 const Portfolio = () => {
@@ -92,10 +113,9 @@ const Portfolio = () => {
                     alt={project.title}
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">
-                    <h3 className="text-xl font-bold mb-1">{project.title}</h3>
-                    <p className="text-sm">{project.location}</p>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
+                    <h3 className="text-xl font-bold mb-0 leading-tight">{project.title}</h3>
+                    <p className="text-sm opacity-90 leading-tight">{project.location}</p>
                   </div>
                 </div>
                 <div className="p-6">
