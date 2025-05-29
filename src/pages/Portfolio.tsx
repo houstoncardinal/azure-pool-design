@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Sparkles } from 'lucide-react';
 
 // Placeholder data for portfolio projects
-const projects = [
+export const projects = [
   {
     id: 'johnson-family-project',
     title: 'Johnson Family Project',

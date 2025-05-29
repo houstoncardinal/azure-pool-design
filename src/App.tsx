@@ -10,13 +10,17 @@ import ContentExtractor from "./pages/ContentExtractor";
 import GetQuote from "./pages/GetQuote";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import BrownFamilyProject from "./pages/BrownFamilyProject";
-import WhiteFamilyProject from './pages/WhiteFamilyProject';
-import RodriguezFamilyProject from './pages/RodriguezFamilyProject';
-import CoastalOasisProject from './pages/CoastalOasisProject';
-import ModernRetreatProject from './pages/ModernRetreatProject';
-import SereneEscapeProject from './pages/SereneEscapeProject';
 import Portfolio from './pages/Portfolio';
+import JohnsonFamilyProject from './pages/JohnsonFamilyProject';
+import PhillipsFamilyProject from './pages/PhillipsFamilyProject';
+import KieselhorstFamilyProject from './pages/KieselhorstFamilyProject';
+import BrownFamilyProject from './pages/BrownFamilyProject';
+import RobinsonFamilyProject from './pages/RobinsonFamilyProject';
+import RuckerFamilyProject from './pages/RuckerFamilyProject';
+import JenningsFamilyProject from './pages/JenningsFamilyProject';
+import TemsFamilyProject from './pages/TemsFamilyProject';
+import MyerFamilyProject from './pages/MyerFamilyProject';
+import PortfolioManagement from './pages/PortfolioManagement';
 
 const queryClient = new QueryClient();
 
@@ -48,12 +52,16 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/get-quote" element={<GetQuote />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio/johnson-family-project" element={<JohnsonFamilyProject />} />
+          <Route path="/portfolio/phillips-family-project" element={<PhillipsFamilyProject />} />
+          <Route path="/portfolio/kieselhorst-family-project" element={<KieselhorstFamilyProject />} />
           <Route path="/portfolio/brown-family-project" element={<BrownFamilyProject />} />
-          <Route path="/portfolio/white-family-project" element={<WhiteFamilyProject />} />
-          <Route path="/portfolio/rodriguez-family-project" element={<RodriguezFamilyProject />} />
-          <Route path="/portfolio/coastal-oasis-project" element={<CoastalOasisProject />} />
-          <Route path="/portfolio/modern-retreat-project" element={<ModernRetreatProject />} />
-          <Route path="/portfolio/serene-escape-project" element={<SereneEscapeProject />} />
+          <Route path="/portfolio/robinson-family-project" element={<RobinsonFamilyProject />} />
+          <Route path="/portfolio/rucker-family-project" element={<RuckerFamilyProject />} />
+          <Route path="/portfolio/jennings-family-project" element={<JenningsFamilyProject />} />
+          <Route path="/portfolio/tems-family-project" element={<TemsFamilyProject />} />
+          <Route path="/portfolio/myer-family-project" element={<MyerFamilyProject />} />
+          <Route path="/portfolio-management" element={<PortfolioManagement />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
