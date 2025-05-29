@@ -2,10 +2,8 @@ import React from 'react';
 import { ArrowRight, Phone, Calendar, CheckCircle, Award, Users, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-
 const Hero = () => {
-  return (
-    <section id="home" className="relative bg-white overflow-hidden">
+  return <section id="home" className="relative bg-white overflow-hidden">
       {/* Clean Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-white"></div>
       
@@ -28,9 +26,7 @@ const Hero = () => {
               </span>
             </h1>
             
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
-              Blu Touch Pools has an amazing team of designers, technicians, and craftsmen that will guide you through the process of creating your own luxury pool design. We strive to reflect the dream of each client in the pools we build from a custom in-ground pool to an in-ground pool with a hot tub!
-            </p>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">Blu Touch Pools has an amazing team of designers, technicians, and craftsmen that will guide you through the process of creating your own luxury pool design. </p>
 
             {/* Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
@@ -54,20 +50,12 @@ const Hero = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button 
-                size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
-              >
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group">
                 <Phone className="mr-2 h-5 w-5" />
                 Call (832) 961-0258
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg group"
-                asChild
-              >
+              <Button variant="outline" size="lg" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg group" asChild>
                 <Link to="/get-quote">
                   <Calendar className="mr-2 h-5 w-5" />
                   Free Consultation
@@ -85,11 +73,7 @@ const Hero = () => {
           {/* Right Column - Image & Features */}
           <div className="relative animate-fade-in-up">
             <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
-              <img 
-                src="/brown-family-pool.jpg"
-                alt="Luxury swimming pool"
-                className="w-full h-64 object-cover rounded-xl mb-6"
-              />
+              <img src="/brown-family-pool.jpg" alt="Luxury swimming pool" className="w-full h-64 object-cover rounded-xl mb-6" />
               
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Why Choose Blu Touch Pools?</h3>
               
@@ -132,8 +116,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
