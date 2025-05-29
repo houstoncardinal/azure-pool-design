@@ -321,7 +321,7 @@ const GetQuote = () => {
                 </p>
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white group-hover:shadow-lg transition-all duration-300">
                   <Mail className="w-4 h-4 mr-2" />
-                  info@blutouchpools.com
+                  gary@blutouchpools.com
                 </Button>
               </div>
             </div>

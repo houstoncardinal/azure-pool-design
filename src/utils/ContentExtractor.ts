@@ -1,4 +1,3 @@
-
 interface ExtractedContent {
   pages: {
     home: PageContent;
@@ -314,7 +313,7 @@ export class ContentExtractor {
         title: 'Contact Information',
         content: {
           phone: phone || '(555) 123-POOL',
-          email: email || 'info@blutouchpools.com',
+          email: email || 'gary@blutouchpools.com',
           address: address || 'Los Angeles, CA',
           hours: 'Monday - Friday: 8AM - 6PM'
         }

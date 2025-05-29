@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import ContentExtractor from "./pages/ContentExtractor";
 import GetQuote from "./pages/GetQuote";
+import Services from "./pages/Services";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +20,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
-          <Route path="/extractor" element={<ContentExtractor />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/get-quote" element={<GetQuote />} />
         </Routes>
       </BrowserRouter>

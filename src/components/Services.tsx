@@ -1,5 +1,5 @@
 import React from 'react';
-import { Waves, Wrench, Sparkles, Shield, Droplets, Zap, ArrowRight, Phone } from 'lucide-react';
+import { Waves, Wrench, Sparkles, Shield, Droplets, Zap, ArrowRight, Phone, CheckCircle, Star } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -10,42 +10,114 @@ const Services = () => {
       icon: Waves,
       title: "Custom Pools & Spas",
       description: "No matter the size of your backyard, we can create a luxury pool and hot tub design that will shape perfectly to fit. We offer estimates which include personal consultations and a 3-D reality view of your new swimming pool.",
-      features: ["3-D Reality View", "Personal Consultations", "Custom In-Ground Pools"],
+      features: [
+        "3-D Reality View",
+        "Personal Consultations",
+        "Custom In-Ground Pools",
+        "Luxury Pool Features",
+        "Professional Installation"
+      ],
+      benefits: [
+        "Expert Design Team",
+        "Quality Materials",
+        "Timely Completion",
+        "Comprehensive Warranty"
+      ],
       price: "Free Estimates"
     },
     {
       icon: Wrench,
       title: "Upgrades & Repairs",
       description: "With a strong commitment to provide first-rate service & support to our customers, Blu Touch Pool Service offers a variety of services and repairs to fit every customer's needs and to fit their budget.",
-      features: ["Equipment Repair", "Budget-Friendly Options", "First-Rate Service"],
+      features: [
+        "Equipment Repair",
+        "System Upgrades",
+        "Surface Renovation",
+        "Feature Installation",
+        "Emergency Repairs"
+      ],
+      benefits: [
+        "24/7 Emergency Service",
+        "Licensed Technicians",
+        "Quality Parts",
+        "Competitive Pricing"
+      ],
       price: "Competitive Rates"
     },
     {
       icon: Sparkles,
       title: "Pool Servicing",
       description: "Blu Touch Pool Service specializes in routine pool maintenance, Drain & Fills, equipment repair of swimming pools in Fort Bend County and surrounding areas.",
-      features: ["Routine Maintenance", "Drain & Fills", "Equipment Repair"],
+      features: [
+        "Weekly Maintenance",
+        "Chemical Balancing",
+        "Equipment Inspection",
+        "Cleaning Services",
+        "Water Testing"
+      ],
+      benefits: [
+        "Regular Service Schedule",
+        "Expert Technicians",
+        "Comprehensive Care",
+        "Detailed Reports"
+      ],
       price: "Weekly Service"
     },
     {
       icon: Shield,
       title: "Modern Pool Designs",
       description: "Modern pools and designs to bring your backyard oasis to life. We strive to reflect the dream of each client in the pools we build.",
-      features: ["Backyard Oasis", "Modern Designs", "Dream Reflection"],
+      features: [
+        "Smart Controls",
+        "Automation Systems",
+        "Energy Efficiency",
+        "Remote Monitoring",
+        "Safety Features"
+      ],
+      benefits: [
+        "Energy Savings",
+        "Enhanced Safety",
+        "Convenient Control",
+        "Modern Integration"
+      ],
       price: "Custom Pricing"
     },
     {
       icon: Droplets,
       title: "Hot Tub Integration",
       description: "From custom in-ground pools to in-ground pools with hot tubs, we create luxury designs that perfectly complement your outdoor space.",
-      features: ["Hot Tub Integration", "Luxury Designs", "Perfect Fit"],
+      features: [
+        "Custom Spa Design",
+        "Integrated Systems",
+        "Heating Solutions",
+        "Water Features",
+        "Lighting Options"
+      ],
+      benefits: [
+        "Year-Round Use",
+        "Energy Efficient",
+        "Custom Design",
+        "Professional Installation"
+      ],
       price: "From $25K"
     },
     {
       icon: Zap,
       title: "Professional Installation",
       description: "Our amazing team of designers, technicians, and craftsmen guide you through the entire process of creating your luxury pool design.",
-      features: ["Expert Installation", "Professional Team", "Complete Guidance"],
+      features: [
+        "Full-Service Solutions",
+        "Expert Consultation",
+        "Quality Installation",
+        "Ongoing Support",
+        "Warranty Coverage"
+      ],
+      benefits: [
+        "One-Stop Service",
+        "Experienced Team",
+        "Quality Guarantee",
+        "Customer Satisfaction"
+      ],
       price: "Included"
     }
   ];
@@ -69,7 +141,7 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => {
+          {services.map((service) => {
             const IconComponent = service.icon;
             return (
               <Card 
@@ -89,14 +161,37 @@ const Services = () => {
                     {service.description}
                   </p>
                   
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-700">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                        <span className="text-sm font-medium">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="grid sm:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        Key Features
+                      </h4>
+                      <ul className="space-y-2">
+                        {service.features.slice(0, 3).map((feature) => (
+                          <li key={feature} className="flex items-center text-gray-700 text-sm">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
+                        <Star className="w-4 h-4 text-yellow-500 mr-2" />
+                        Benefits
+                      </h4>
+                      <ul className="space-y-2">
+                        {service.benefits.slice(0, 3).map((benefit) => (
+                          <li key={benefit} className="flex items-center text-gray-700 text-sm">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span>{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
 
                   <div className="border-t border-gray-100 pt-6 mt-auto">
                     <div className="flex items-center justify-between mb-4">
@@ -134,8 +229,11 @@ const Services = () => {
               size="lg"
               variant="outline" 
               className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 font-semibold"
+              asChild
             >
-              Free Consultation & 3-D View
+              <Link to="/get-quote">
+                Free Consultation & 3-D View
+              </Link>
             </Button>
           </div>
           
