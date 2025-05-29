@@ -33,9 +33,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-gray-900">
-              <span className="text-blue-600">BluTouch</span>
-              <span className="ml-1 font-normal">Pools</span>
+            <Link to="/">
+              <img 
+                src="/blutouch-logo.png" 
+                alt="Blu Touch Pools Logo"
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
 
