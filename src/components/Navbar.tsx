@@ -2,6 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,8 +27,18 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
+    { name: 'Portfolio', href: '/portfolio' },
     { name: 'Contact', href: '/contact' },
     { name: 'Get Quote', href: '/get-quote' }
+  ];
+
+  const serviceItems = [
+    { name: 'Custom Pools & Spas', href: '/custom-pools-spas' },
+    { name: 'Upgrades & Repairs', href: '/upgrades-repairs' },
+    { name: 'Pool Servicing', href: '/pool-servicing' },
+    { name: 'Modern Pool Designs', href: '/modern-pool-designs' },
+    { name: 'Hot Tub Integration', href: '/hot-tub-integration' },
+    { name: 'Professional Installation', href: '/professional-installation' }
   ];
 
   return (
@@ -33,12 +51,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/">
-              <img 
-                src="/blutouch-logo.png" 
-                alt="Blu Touch Pools Logo"
-                className="h-10 w-auto"
-              />
+            <Link to="/" className="text-2xl font-bold text-gray-900">
+              <span className="text-blue-600">BluTouch</span>
+              <span className="ml-1 font-normal">Pools</span>
             </Link>
           </div>
 
@@ -46,22 +61,60 @@ const Navbar = () => {
           <div className="hidden lg:block">
             <div className="ml-10 flex items-center space-x-1">
               {navItems.map((item) => (
-                item.href.startsWith('/') ? (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-all duration-200 rounded-lg"
-                  >
-                    {item.name}
-                  </Link>
+                item.name === 'Services' ? (
+                  <NavigationMenu key={item.name}>
+                    <NavigationMenuList>
+                      <NavigationMenuItem>
+                        <NavigationMenuTrigger className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-all duration-200 rounded-lg">
+                          Services
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                            <li>
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  to="/services"
+                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                >
+                                  <div className="text-sm font-medium leading-none">All Services</div>
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                            {serviceItems.map((service) => (
+                              <li key={service.name}>
+                                <NavigationMenuLink asChild>
+                                  <Link
+                                    to={service.href}
+                                    className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                                  >
+                                    <div className="text-sm font-medium leading-none">{service.name}</div>
+                                  </Link>
+                                </NavigationMenuLink>
+                              </li>
+                            ))}
+                          </ul>
+                        </NavigationMenuContent>
+                      </NavigationMenuItem>
+                    </NavigationMenuList>
+                  </NavigationMenu>
                 ) : (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-all duration-200 rounded-lg"
-                  >
-                    {item.name}
-                  </a>
+                  item.href.startsWith('/') ? (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-all duration-200 rounded-lg"
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-all duration-200 rounded-lg"
+                    >
+                      {item.name}
+                    </a>
+                  )
                 )
               ))}
             </div>
@@ -100,24 +153,46 @@ const Navbar = () => {
           <div className="lg:hidden border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
               {navItems.map((item) => (
-                item.href.startsWith('/') ? (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
+                item.name === 'Services' ? (
+                  <div key={item.name} className="space-y-1">
+                    <Link
+                      to="/services"
+                      className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      All Services
+                    </Link>
+                    {serviceItems.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="block px-8 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
                 ) : (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </a>
+                  item.href.startsWith('/') ? (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  )
                 )
               ))}
               <div className="pt-4 space-y-2">

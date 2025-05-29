@@ -20,7 +20,18 @@ import RuckerFamilyProject from './pages/RuckerFamilyProject';
 import JenningsFamilyProject from './pages/JenningsFamilyProject';
 import TemsFamilyProject from './pages/TemsFamilyProject';
 import MyerFamilyProject from './pages/MyerFamilyProject';
+import SereneEscapeProject from './pages/SereneEscapeProject';
+import ModernRetreatProject from './pages/ModernRetreatProject';
+import CoastalOasisProject from './pages/CoastalOasisProject';
+import RodriguezFamilyProject from './pages/RodriguezFamilyProject';
+import WhiteFamilyProject from './pages/WhiteFamilyProject';
 import PortfolioManagement from './pages/PortfolioManagement';
+import CustomPoolsSpas from './pages/CustomPoolsSpas';
+import UpgradesRepairs from './pages/UpgradesRepairs';
+import PoolServicing from './pages/PoolServicing';
+import ModernPoolDesigns from './pages/ModernPoolDesigns';
+import HotTubIntegration from './pages/HotTubIntegration';
+import ProfessionalInstallation from './pages/ProfessionalInstallation';
 
 const queryClient = new QueryClient();
 
@@ -61,7 +72,19 @@ const App = () => (
           <Route path="/portfolio/jennings-family-project" element={<JenningsFamilyProject />} />
           <Route path="/portfolio/tems-family-project" element={<TemsFamilyProject />} />
           <Route path="/portfolio/myer-family-project" element={<MyerFamilyProject />} />
+          <Route path="/portfolio/serene-escape-project" element={<SereneEscapeProject />} />
+          <Route path="/portfolio/modern-retreat-project" element={<ModernRetreatProject />} />
+          <Route path="/portfolio/coastal-oasis-project" element={<CoastalOasisProject />} />
+          <Route path="/portfolio/rodriguez-family-project" element={<RodriguezFamilyProject />} />
+          <Route path="/portfolio/white-family-project" element={<WhiteFamilyProject />} />
           <Route path="/portfolio-management" element={<PortfolioManagement />} />
+          {/* Service Pages */}
+          <Route path="/custom-pools-spas" element={<CustomPoolsSpas />} />
+          <Route path="/upgrades-repairs" element={<UpgradesRepairs />} />
+          <Route path="/pool-servicing" element={<PoolServicing />} />
+          <Route path="/modern-pool-designs" element={<ModernPoolDesigns />} />
+          <Route path="/hot-tub-integration" element={<HotTubIntegration />} />
+          <Route path="/professional-installation" element={<ProfessionalInstallation />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
