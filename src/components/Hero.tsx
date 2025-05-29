@@ -20,10 +20,7 @@ const Hero = () => {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               <span className="block">Experience The</span>
-              <span className="block text-blue-600">Blu Touch</span>
-              <span className="block text-xl sm:text-2xl lg:text-3xl font-normal text-gray-600 mt-4">
-                Difference
-              </span>
+              <span className="block text-blue-600">Blu Touch Difference</span>
             </h1>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">Blu Touch Pools has an amazing team of designers, technicians, and craftsmen that will guide you through the process of creating your own luxury pool design. </p>
