@@ -8,27 +8,33 @@ const Portfolio = () => {
     {
       id: 1,
       title: "Brown Family Project",
+      description: "A stunning custom luxury pool and hot tub designed and built for the Brown family, featuring unique water features and a beautiful patio area.",
       location: "Houston, TX",
-      image: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/brown-family-pool.jpg",
       category: "Custom Pool & Spa",
-      features: ["In-Ground Pool", "Hot Tub Integration", "Modern Design"]
+      features: ["In-Ground Pool", "Hot Tub Integration", "Modern Design"],
+      link: "/portfolio/brown-family-project",
     },
     {
       id: 2,
       title: "Robinson Family Project",
+      description: "A luxurious custom pool designed for the Robinson family, featuring a modern shape and elegant finishes.",
       location: "Pearland, TX",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/robinson-pool.jpg",
       category: "Luxury Pool",
-      features: ["Custom Design", "3-D Planning", "Premium Finishes"]
+      features: ["Custom Design", "3-D Planning", "Premium Finishes"],
+      link: "/portfolio/robinson-family-project",
     },
     {
       id: 3,
       title: "Rucker Family Project",
+      description: "A beautiful backyard oasis for the Rucker family, with a modern pool, integrated landscape, and entertainment space.",
       location: "Friendswood, TX",
-      image: "https://images.unsplash.com/photo-1562778612-e1e0cda9915c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/rucker-family.jpg",
       category: "Backyard Oasis",
-      features: ["Modern Pool", "Landscape Integration", "Entertainment Space"]
-    }
+      features: ["Modern Pool", "Landscape Integration", "Entertainment Space"],
+      link: "/portfolio/rucker-family-project",
+    },
   ];
 
   const testimonials = [
@@ -72,7 +78,7 @@ const Portfolio = () => {
         </div>
 
         {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {projects.map((project, index) => (
             <div 
               key={project.id}
@@ -114,7 +120,7 @@ const Portfolio = () => {
                   className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 group"
                   asChild
                 >
-                  <a href={project.title === 'Brown Family Project' ? '/BrownFamilyProject' : '#'}>
+                  <a href={project.link}>
                     View Details
                     <ExternalLink className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </a>
@@ -122,6 +128,13 @@ const Portfolio = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* View All Projects Button */}
+        <div className="text-center mb-20">
+          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 font-semibold" asChild>
+            <a href="/portfolio">View All Projects</a>
+          </Button>
         </div>
 
         {/* Client Testimonials Section */}

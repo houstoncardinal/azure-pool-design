@@ -19,37 +19,32 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const BrownFamilyProject = () => {
+const CoastalOasisProject = () => {
   const project = {
-    title: "Brown Family Project",
-    subtitle: "Custom Luxury Pool & Hot Tub in Fort Bend County",
-    description: "Designed and built for the Brown family, this stunning backyard oasis features a custom in-ground pool with integrated hot tub, unique water features, sun shelf with bubblers, and ample deck space for entertaining. The project reflects our commitment to personalized design and high-quality craftsmanship, creating a perfect blend of luxury and functionality.",
-    location: "Fort Bend County, TX",
-    category: "Custom Pool & Spa, Hot Tub Integration",
-    size: "Approx. 18,000 Gallons",
+    title: "Coastal Oasis Project",
+    subtitle: "Lagoon-Style Pool in Galveston, TX",
+    description: "This project transformed a backyard into a coastal oasis with a freeform lagoon-style pool. Designed to blend seamlessly with the natural surroundings, it features natural rock waterfalls, lush landscaping, and a tanning ledge, creating a serene and relaxing retreat.",
+    location: "Galveston, TX",
+    category: "Lagoon Pool, Natural Design",
+    size: "Approx. 20,000 Gallons", // Placeholder size
     features: [
-      "Custom In-Ground Pool",
-      "Integrated Spillover Hot Tub",
-      "Sun Shelf with Bubblers",
-      "Stacked Stone Water Features",
-      "LED Lighting System",
-      "Automated Control System",
-      "Premium Pool Finish",
-      "Spacious Paver Patio"
+      "Freeform Lagoon Shape",
+      "Natural Rock Waterfalls",
+      "Integrated Tanning Ledge",
+      "Custom Rock Coping",
+      "Lush Tropical Landscaping"
     ],
     benefits: [
-      "Personalized Luxury Design",
-      "Enhanced Backyard Aesthetics",
-      "Relaxation & Entertainment Space",
-      "Low Maintenance with Automation",
-      "Increased Property Value",
-      "Durable & High-Quality Construction"
+      "Natural & Relaxing Environment",
+      "Seamless Integration with Landscape",
+      "Perfect for Sunbathing",
+      "Durable & Aesthetic Materials",
+      "Increased Property Value"
     ],
     images: [
-      "/brown-family-pool.jpg", // Main image
-      "https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Example additional image
-      "https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Example additional image
-      "https://images.unsplash.com/photo-1586027652881-e682d0396b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Example additional image
+      "https://images.unsplash.com/photo-1586027652881-e682d0396b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 1
+      "https://images.unsplash.com/photo-1586027652881-e682d0396b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 2
+      "https://images.unsplash.com/photo-1586027652881-e682d0396b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder image 3
     ]
   };
 
@@ -198,4 +193,4 @@ const BrownFamilyProject = () => {
   );
 };
 
-export default BrownFamilyProject; 
+export default CoastalOasisProject; 

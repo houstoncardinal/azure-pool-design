@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Award, Users, Heart, Star, CheckCircle, Phone, MapPin, ArrowRight, Calendar } from 'lucide-react';
+import { Award, Users, Heart, Star, CheckCircle, Phone, MapPin, ArrowRight, Calendar, Building2, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const About = () => {
@@ -11,110 +11,117 @@ const About = () => {
       
       {/* Hero Section */}
       <section className="relative bg-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-white"></div>
+        {/* Subtle Background Pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
             {/* Left Column - Main Content */}
-            <div className="animate-fade-in-up">
-              {/* Corporate Badge */}
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-semibold mb-8">
-                <Heart className="w-4 h-4 mr-2" />
-                Experience Excellence in Pool Design
+            <div>
+              {/* Company Badge */}
+              <div className="inline-flex items-center px-6 py-3 rounded-full bg-gray-50 border border-gray-200 text-gray-700 text-sm font-semibold mb-8">
+                <Building2 className="w-4 h-4 mr-2 text-blue-600" />
+                Established 2013
               </div>
 
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                About
-                <span className="block text-blue-600">Blu Touch Pools</span>
+              <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                <span className="block text-gray-900">Crafting</span>
+                <span className="block text-blue-600">Excellence</span>
                 <span className="block text-2xl lg:text-3xl font-normal text-gray-600 mt-4">
-                  Crafting Aquatic Masterpieces
+                  in Pool Design & Service
                 </span>
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
-                Join the Blu Touch Pool family today and experience modern pools at affordable prices with over 10 years of expert service. We transform ordinary backyards into extraordinary aquatic sanctuaries.
+                For over a decade, Blu Touch Pools has been transforming Houston's backyards into extraordinary aquatic sanctuaries. Our journey is built on craftsmanship, innovation, and an unwavering commitment to customer satisfaction.
               </p>
 
-              {/* Key Benefits */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-                <div className="flex items-center text-gray-700">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="font-medium">10+ Years Experience</span>
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-10">
+                <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                  <div className="text-3xl font-bold text-gray-900 mb-1">500+</div>
+                  <div className="text-sm text-gray-600">Pools Built</div>
                 </div>
-                <div className="flex items-center text-gray-700">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="font-medium">Award-Winning Design</span>
+                <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                  <div className="text-3xl font-bold text-gray-900 mb-1">10+</div>
+                  <div className="text-sm text-gray-600">Years Experience</div>
                 </div>
-                <div className="flex items-center text-gray-700">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="font-medium">Expert Team</span>
+                <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                  <div className="text-3xl font-bold text-gray-900 mb-1">98%</div>
+                  <div className="text-sm text-gray-600">Client Satisfaction</div>
                 </div>
-                <div className="flex items-center text-gray-700">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                  <span className="font-medium">Quality Service</span>
+                <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
+                  <div className="text-3xl font-bold text-gray-900 mb-1">15+</div>
+                  <div className="text-sm text-gray-600">Expert Team</div>
                 </div>
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (832) 961-0258
+                  Schedule a Consultation
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg group"
+                  className="border-2 border-gray-200 text-gray-700 hover:bg-gray-50 px-8 py-4 text-lg font-semibold rounded-lg group"
                 >
-                  <Calendar className="mr-2 h-5 w-5" />
-                  Free Consultation
+                  <Sparkles className="mr-2 h-5 w-5 text-blue-600" />
+                  View Our Work
                 </Button>
               </div>
             </div>
 
             {/* Right Column - Image & Features */}
-            <div className="relative animate-fade-in-up">
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
-                <img 
-                  src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="Luxury swimming pool"
-                  className="w-full h-64 object-cover rounded-xl mb-6"
-                />
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-50 to-gray-50 rounded-2xl opacity-50"></div>
+              <div className="relative bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <img 
+                    src="/brown-family-pool.jpg"
+                    alt="Luxury pool design"
+                    className="w-full h-48 object-cover rounded-xl shadow-sm"
+                  />
+                  <img 
+                    src="/robinson-pool.jpg"
+                    alt="Pool maintenance service"
+                    className="w-full h-48 object-cover rounded-xl shadow-sm mt-8"
+                  />
+                </div>
                 
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Our Commitment to Excellence</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-1">
-                      <Award className="w-4 h-4 text-blue-600" />
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mt-1">
+                      <Award className="w-5 h-5 text-blue-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">Quality Work</h4>
-                      <p className="text-gray-600 text-sm">We pride ourselves on delivering exceptional results that exceed expectations.</p>
+                      <h4 className="font-semibold text-gray-900">Award-Winning Design</h4>
+                      <p className="text-gray-600 text-sm">Recognized for excellence in pool design and construction</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mt-1">
-                      <Users className="w-4 h-4 text-green-600" />
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mt-1">
+                      <Users className="w-5 h-5 text-blue-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">Family Values</h4>
-                      <p className="text-gray-600 text-sm">Built on the principle that family and customers come first.</p>
+                      <h4 className="font-semibold text-gray-900">Family-Owned Business</h4>
+                      <p className="text-gray-600 text-sm">Built on trust, integrity, and personal service</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mt-1">
-                      <Star className="w-4 h-4 text-yellow-600" />
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mt-1">
+                      <Star className="w-5 h-5 text-blue-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">Expert Service</h4>
-                      <p className="text-gray-600 text-sm">Professional maintenance and care for your pool all year round.</p>
+                      <h4 className="font-semibold text-gray-900">Premium Service</h4>
+                      <p className="text-gray-600 text-sm">Dedicated to exceeding customer expectations</p>
                     </div>
                   </div>
                 </div>

@@ -86,7 +86,7 @@ const Hero = () => {
           <div className="relative animate-fade-in-up">
             <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
               <img 
-                src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/brown-family-pool.jpg"
                 alt="Luxury swimming pool"
                 className="w-full h-64 object-cover rounded-xl mb-6"
               />
