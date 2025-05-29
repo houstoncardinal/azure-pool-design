@@ -21,8 +21,8 @@ const Hero = () => {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              <span className="whitespace-nowrap">Experience The </span>
-              <span className="whitespace-nowrap text-blue-600">Blu Touch</span>
+              <span className="block">Experience The</span>
+              <span className="block text-blue-600">Blu Touch</span>
               <span className="block text-xl sm:text-2xl lg:text-3xl font-normal text-gray-600 mt-4">
                 Difference
               </span>
