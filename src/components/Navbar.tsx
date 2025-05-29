@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,11 +17,11 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Portfolio', href: '/#portfolio' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/#contact' },
     { name: 'Extractor', href: '/extractor' }
   ];
 
@@ -34,23 +35,33 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-gray-900">
+            <Link to="/" className="text-2xl font-bold text-gray-900">
               <span className="text-blue-600">BluTouch</span>
               <span className="ml-1 font-normal">Pools</span>
-            </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-center space-x-1">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-all duration-200 rounded-lg"
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('/') ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-all duration-200 rounded-lg"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-all duration-200 rounded-lg"
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
             </div>
           </div>
@@ -87,14 +98,25 @@ const Navbar = () => {
           <div className="lg:hidden border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('/') ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
               <div className="pt-4 space-y-2">
                 <Button variant="outline" className="w-full border-blue-600 text-blue-600">
