@@ -10,7 +10,7 @@ export const projects = [
     id: 'jones-family-project',
     title: 'Jones Family Project',
     location: 'Houston, TX',
-    image: '/jones-family-pool-1.jpg',
+    image: '/jones-family-pool-night-2.JPG',
     description: 'A beautiful custom pool and spa project.'
   },
   {
