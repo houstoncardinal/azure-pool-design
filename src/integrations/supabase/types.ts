@@ -9,7 +9,105 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      contact_submissions: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          phone: string | null
+          subject: string | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          phone?: string | null
+          subject?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          phone?: string | null
+          subject?: string | null
+        }
+        Relationships: []
+      }
+      newsletter_subscriptions: {
+        Row: {
+          email: string
+          id: string
+          is_active: boolean
+          subscribed_at: string
+        }
+        Insert: {
+          email: string
+          id?: string
+          is_active?: boolean
+          subscribed_at?: string
+        }
+        Update: {
+          email?: string
+          id?: string
+          is_active?: boolean
+          subscribed_at?: string
+        }
+        Relationships: []
+      }
+      quote_requests: {
+        Row: {
+          address: string | null
+          contact_method: string
+          created_at: string
+          email: string
+          features: Json | null
+          id: string
+          name: string
+          notes: string | null
+          phone: string | null
+          pool_size: string | null
+          preferred_callback_time: string | null
+          project_type: string
+          timeline: string | null
+        }
+        Insert: {
+          address?: string | null
+          contact_method?: string
+          created_at?: string
+          email: string
+          features?: Json | null
+          id?: string
+          name: string
+          notes?: string | null
+          phone?: string | null
+          pool_size?: string | null
+          preferred_callback_time?: string | null
+          project_type: string
+          timeline?: string | null
+        }
+        Update: {
+          address?: string | null
+          contact_method?: string
+          created_at?: string
+          email?: string
+          features?: Json | null
+          id?: string
+          name?: string
+          notes?: string | null
+          phone?: string | null
+          pool_size?: string | null
+          preferred_callback_time?: string | null
+          project_type?: string
+          timeline?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

@@ -8,10 +8,75 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useQuoteForm } from '@/hooks/useFormSubmissions';
 
 const GetQuote = () => {
+  const { submitQuote, isLoading } = useQuoteForm();
   const [contactMethod, setContactMethod] = useState('phone');
   const [formStep, setFormStep] = useState(1);
+  const [formData, setFormData] = useState({
+    projectType: '',
+    poolSize: '',
+    features: [] as string[],
+    notes: '',
+    name: '',
+    email: '',
+    phone: '',
+    preferredCallbackTime: '',
+    address: '',
+    timeline: ''
+  });
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const handleFeatureChange = (feature: string, checked: boolean) => {
+    setFormData(prev => ({
+      ...prev,
+      features: checked 
+        ? [...prev.features, feature]
+        : prev.features.filter(f => f !== feature)
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const result = await submitQuote({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      address: formData.address,
+      project_type: formData.projectType,
+      pool_size: formData.poolSize,
+      features: formData.features,
+      timeline: formData.timeline,
+      notes: formData.notes,
+      contact_method: contactMethod,
+      preferred_callback_time: contactMethod === 'callback' ? formData.preferredCallbackTime : undefined
+    });
+    
+    if (result.success) {
+      // Reset form
+      setFormData({
+        projectType: '',
+        poolSize: '',
+        features: [],
+        notes: '',
+        name: '',
+        email: '',
+        phone: '',
+        preferredCallbackTime: '',
+        address: '',
+        timeline: ''
+      });
+      setFormStep(1);
+      setContactMethod('phone');
+    }
+  };
 
   return (
     <div className="min-h-screen font-inter bg-white">
@@ -133,13 +198,13 @@ const GetQuote = () => {
                 </div>
               </div>
 
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {formStep === 1 ? (
                   <>
                     <div className="space-y-4">
                       <div>
                         <Label htmlFor="projectType">Project Type</Label>
-                        <Select>
+                        <Select value={formData.projectType} onValueChange={(value) => handleInputChange('projectType', value)}>
                           <SelectTrigger>
                             <SelectValue placeholder="Select project type" />
                           </SelectTrigger>
@@ -154,7 +219,7 @@ const GetQuote = () => {
 
                       <div>
                         <Label htmlFor="poolSize">Estimated Pool Size</Label>
-                        <Select>
+                        <Select value={formData.poolSize} onValueChange={(value) => handleInputChange('poolSize', value)}>
                           <SelectTrigger>
                             <SelectValue placeholder="Select pool size" />
                           </SelectTrigger>
@@ -163,6 +228,22 @@ const GetQuote = () => {
                             <SelectItem value="medium">Medium (15x30 ft)</SelectItem>
                             <SelectItem value="large">Large (20x40 ft)</SelectItem>
                             <SelectItem value="custom">Custom Size</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+
+                      <div>
+                        <Label htmlFor="timeline">Timeline</Label>
+                        <Select value={formData.timeline} onValueChange={(value) => handleInputChange('timeline', value)}>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Project timeline" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="immediate">ASAP</SelectItem>
+                            <SelectItem value="1-3months">1-3 months</SelectItem>
+                            <SelectItem value="3-6months">3-6 months</SelectItem>
+                            <SelectItem value="6-12months">6-12 months</SelectItem>
+                            <SelectItem value="planning">Just planning ahead</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -179,7 +260,13 @@ const GetQuote = () => {
                             'Salt System'
                           ].map((feature) => (
                             <div key={feature} className="flex items-center space-x-2">
-                              <input type="checkbox" id={feature} className="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+                              <input 
+                                type="checkbox" 
+                                id={feature} 
+                                checked={formData.features.includes(feature)}
+                                onChange={(e) => handleFeatureChange(feature, e.target.checked)}
+                                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500" 
+                              />
                               <label htmlFor={feature} className="text-sm text-gray-700">{feature}</label>
                             </div>
                           ))}
@@ -191,6 +278,8 @@ const GetQuote = () => {
                         <Textarea 
                           id="notes" 
                           placeholder="Tell us about your vision for your pool..."
+                          value={formData.notes}
+                          onChange={(e) => handleInputChange('notes', e.target.value)}
                           className="mt-2"
                         />
                       </div>
@@ -210,23 +299,42 @@ const GetQuote = () => {
                     <div className="space-y-4">
                       <div>
                         <Label htmlFor="name">Full Name</Label>
-                        <Input id="name" placeholder="Enter your full name" />
+                        <Input 
+                          id="name" 
+                          placeholder="Enter your full name" 
+                          value={formData.name}
+                          onChange={(e) => handleInputChange('name', e.target.value)}
+                          required
+                        />
                       </div>
 
                       <div>
                         <Label htmlFor="email">Email Address</Label>
-                        <Input id="email" type="email" placeholder="Enter your email" />
+                        <Input 
+                          id="email" 
+                          type="email" 
+                          placeholder="Enter your email" 
+                          value={formData.email}
+                          onChange={(e) => handleInputChange('email', e.target.value)}
+                          required
+                        />
                       </div>
 
                       <div>
                         <Label htmlFor="phone">Phone Number</Label>
-                        <Input id="phone" type="tel" placeholder="Enter your phone number" />
+                        <Input 
+                          id="phone" 
+                          type="tel" 
+                          placeholder="Enter your phone number" 
+                          value={formData.phone}
+                          onChange={(e) => handleInputChange('phone', e.target.value)}
+                        />
                       </div>
 
                       {contactMethod === 'callback' && (
                         <div>
                           <Label htmlFor="preferredTime">Preferred Callback Time</Label>
-                          <Select>
+                          <Select value={formData.preferredCallbackTime} onValueChange={(value) => handleInputChange('preferredCallbackTime', value)}>
                             <SelectTrigger>
                               <SelectValue placeholder="Select preferred time" />
                             </SelectTrigger>
@@ -241,7 +349,12 @@ const GetQuote = () => {
 
                       <div>
                         <Label htmlFor="address">Property Address</Label>
-                        <Input id="address" placeholder="Enter your property address" />
+                        <Input 
+                          id="address" 
+                          placeholder="Enter your property address" 
+                          value={formData.address}
+                          onChange={(e) => handleInputChange('address', e.target.value)}
+                        />
                       </div>
                     </div>
 
@@ -255,9 +368,10 @@ const GetQuote = () => {
                       </Button>
                       <Button 
                         type="submit"
+                        disabled={isLoading}
                         className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                       >
-                        Submit Quote Request
+                        {isLoading ? 'Submitting...' : 'Submit Quote Request'}
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Button>
                     </div>
@@ -370,4 +484,4 @@ const GetQuote = () => {
   );
 };
 
-export default GetQuote; 
+export default GetQuote;

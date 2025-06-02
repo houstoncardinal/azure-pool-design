@@ -1,10 +1,12 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { useContactForm } from '@/hooks/useFormSubmissions';
 import { 
   Phone, 
   Mail, 
@@ -17,6 +19,36 @@ import {
 } from 'lucide-react';
 
 const Contact = () => {
+  const { submitContact, isLoading } = useContactForm();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const result = await submitContact(formData);
+    if (result.success) {
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.id]: e.target.value
+    }));
+  };
+
   return (
     <div className="min-h-screen font-inter bg-white">
       <Navbar />
@@ -137,7 +169,7 @@ const Contact = () => {
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6 sm:p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -147,6 +179,9 @@ const Contact = () => {
                         id="name"
                         type="text"
                         placeholder="John Doe"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
                         className="w-full"
                       />
                     </div>
@@ -158,6 +193,9 @@ const Contact = () => {
                         id="email"
                         type="email"
                         placeholder="john@example.com"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
                         className="w-full"
                       />
                     </div>
@@ -171,6 +209,8 @@ const Contact = () => {
                       id="phone"
                       type="tel"
                       placeholder="(555) 123-4567"
+                      value={formData.phone}
+                      onChange={handleInputChange}
                       className="w-full"
                     />
                   </div>
@@ -183,6 +223,8 @@ const Contact = () => {
                       id="subject"
                       type="text"
                       placeholder="How can we help you?"
+                      value={formData.subject}
+                      onChange={handleInputChange}
                       className="w-full"
                     />
                   </div>
@@ -194,15 +236,19 @@ const Contact = () => {
                     <Textarea
                       id="message"
                       placeholder="Tell us about your project..."
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
                       className="w-full min-h-[150px]"
                     />
                   </div>
 
                   <Button 
                     type="submit"
+                    disabled={isLoading}
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium group"
                   >
-                    Send Message
+                    {isLoading ? 'Sending...' : 'Send Message'}
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </form>
@@ -237,4 +283,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;

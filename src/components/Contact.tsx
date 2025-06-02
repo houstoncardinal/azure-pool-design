@@ -1,10 +1,55 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Award, Shield, ExternalLink, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { useContactForm } from '@/hooks/useFormSubmissions';
 
 const Contact = () => {
+  const { submitContact, isLoading } = useContactForm();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    location: '',
+    serviceType: '',
+    timeline: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.id]: e.target.value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const result = await submitContact({
+      name: `${formData.firstName} ${formData.lastName}`.trim(),
+      email: formData.email,
+      phone: formData.phone,
+      subject: `${formData.serviceType} - ${formData.timeline}`,
+      message: `Location: ${formData.location}\nService Type: ${formData.serviceType}\nTimeline: ${formData.timeline}\n\nMessage: ${formData.message}`
+    });
+    
+    if (result.success) {
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        location: '',
+        serviceType: '',
+        timeline: '',
+        message: ''
+      });
+    }
+  };
+
   return (
     <section id="contact" className="py-16 sm:py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
       {/* Subtle Background Effects */}
@@ -46,7 +91,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              <form className="space-y-5 sm:space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-8">
                 {/* Name Fields */}
                 <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div className="group">
@@ -55,7 +100,11 @@ const Contact = () => {
                     </label>
                     <div className="relative">
                       <Input 
+                        id="firstName"
                         placeholder="Enter your first name"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        required
                         className="w-full bg-transparent border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 sm:py-4 text-base sm:text-lg focus:border-blue-600 focus:ring-0 transition-all duration-300 placeholder:text-gray-400"
                       />
                     </div>
@@ -66,7 +115,11 @@ const Contact = () => {
                     </label>
                     <div className="relative">
                       <Input 
+                        id="lastName"
                         placeholder="Enter your last name"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        required
                         className="w-full bg-transparent border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 sm:py-4 text-base sm:text-lg focus:border-blue-600 focus:ring-0 transition-all duration-300 placeholder:text-gray-400"
                       />
                     </div>
@@ -81,8 +134,12 @@ const Contact = () => {
                     </label>
                     <div className="relative">
                       <Input 
+                        id="email"
                         type="email"
                         placeholder="your.email@example.com"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
                         className="w-full bg-transparent border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 sm:py-4 text-base sm:text-lg focus:border-blue-600 focus:ring-0 transition-all duration-300 placeholder:text-gray-400"
                       />
                     </div>
@@ -93,8 +150,11 @@ const Contact = () => {
                     </label>
                     <div className="relative">
                       <Input 
+                        id="phone"
                         type="tel"
                         placeholder="(832) 555-0123"
+                        value={formData.phone}
+                        onChange={handleInputChange}
                         className="w-full bg-transparent border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 sm:py-4 text-base sm:text-lg focus:border-blue-600 focus:ring-0 transition-all duration-300 placeholder:text-gray-400"
                       />
                     </div>
@@ -108,7 +168,10 @@ const Contact = () => {
                   </label>
                   <div className="relative">
                     <Input 
+                      id="location"
                       placeholder="Houston, Pearland, Alvin, Friendswood, etc."
+                      value={formData.location}
+                      onChange={handleInputChange}
                       className="w-full bg-transparent border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 sm:py-4 text-base sm:text-lg focus:border-blue-600 focus:ring-0 transition-all duration-300 placeholder:text-gray-400"
                     />
                   </div>
@@ -121,7 +184,12 @@ const Contact = () => {
                       Service Type
                     </label>
                     <div className="relative">
-                      <select className="w-full bg-transparent border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 sm:py-4 text-base sm:text-lg focus:border-blue-600 focus:ring-0 transition-all duration-300 text-gray-700 appearance-none cursor-pointer">
+                      <select 
+                        id="serviceType"
+                        value={formData.serviceType}
+                        onChange={handleInputChange}
+                        className="w-full bg-transparent border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 sm:py-4 text-base sm:text-lg focus:border-blue-600 focus:ring-0 transition-all duration-300 text-gray-700 appearance-none cursor-pointer"
+                      >
                         <option value="" className="text-gray-400">Select service type</option>
                         <option value="new">New Pool Construction</option>
                         <option value="renovation">Pool Renovation</option>
@@ -136,7 +204,12 @@ const Contact = () => {
                       Timeline
                     </label>
                     <div className="relative">
-                      <select className="w-full bg-transparent border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 sm:py-4 text-base sm:text-lg focus:border-blue-600 focus:ring-0 transition-all duration-300 text-gray-700 appearance-none cursor-pointer">
+                      <select 
+                        id="timeline"
+                        value={formData.timeline}
+                        onChange={handleInputChange}
+                        className="w-full bg-transparent border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 sm:py-4 text-base sm:text-lg focus:border-blue-600 focus:ring-0 transition-all duration-300 text-gray-700 appearance-none cursor-pointer"
+                      >
                         <option value="" className="text-gray-400">Project timeline</option>
                         <option value="immediate">ASAP - Emergency Service</option>
                         <option value="1-3months">1-3 months</option>
@@ -155,8 +228,12 @@ const Contact = () => {
                   </label>
                   <div className="relative">
                     <Textarea 
+                      id="message"
                       placeholder="Describe your dream pool, spa, or service needs. Include any specific features, size requirements, or concerns you'd like to discuss..."
                       rows={4}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
                       className="w-full bg-transparent border-0 border-b-2 border-gray-200 rounded-none px-0 py-3 sm:py-4 text-base sm:text-lg focus:border-blue-600 focus:ring-0 transition-all duration-300 placeholder:text-gray-400 resize-none"
                     />
                   </div>
@@ -166,12 +243,13 @@ const Contact = () => {
                 <div className="pt-4 sm:pt-8">
                   <Button 
                     type="submit"
+                    disabled={isLoading}
                     className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 sm:py-6 text-base sm:text-xl font-semibold transition-all duration-500 hover:scale-[1.02] rounded-lg sm:rounded-2xl shadow-lg sm:shadow-xl hover:shadow-2xl relative overflow-hidden group"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative flex items-center justify-center">
                       <Send className="mr-2 sm:mr-3 h-4 w-4 sm:h-6 sm:w-6" />
-                      Request Free Consultation & Quote
+                      {isLoading ? 'Sending...' : 'Request Free Consultation & Quote'}
                     </div>
                   </Button>
                   <p className="text-center text-xs sm:text-sm text-gray-500 mt-2 sm:mt-4">
