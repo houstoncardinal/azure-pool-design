@@ -7,11 +7,11 @@ import { Sparkles } from 'lucide-react';
 // Placeholder data for portfolio projects
 export const projects = [
   {
-    id: 'johnson-family-project',
-    title: 'Johnson Family Project',
+    id: 'jones-family-project',
+    title: 'Jones Family Project',
     location: 'Houston, TX',
-    image: '/johnson-family-pool.jpg',
-    description: 'A stunning custom pool and spa built for the Johnson family.'
+    image: '/jones-family-pool-1.jpg',
+    description: 'A beautiful custom pool and spa project.'
   },
   {
     id: 'phillips-family-project',

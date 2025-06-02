@@ -11,7 +11,6 @@ import GetQuote from "./pages/GetQuote";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Portfolio from './pages/Portfolio';
-import JohnsonFamilyProject from './pages/JohnsonFamilyProject';
 import PhillipsFamilyProject from './pages/PhillipsFamilyProject';
 import KieselhorstFamilyProject from './pages/KieselhorstFamilyProject';
 import BrownFamilyProject from './pages/BrownFamilyProject';
@@ -32,6 +31,7 @@ import PoolServicing from './pages/PoolServicing';
 import ModernPoolDesigns from './pages/ModernPoolDesigns';
 import HotTubIntegration from './pages/HotTubIntegration';
 import ProfessionalInstallation from './pages/ProfessionalInstallation';
+import JonesFamilyProject from './pages/JonesFamilyProject';
 
 const queryClient = new QueryClient();
 
@@ -63,7 +63,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/get-quote" element={<GetQuote />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/portfolio/johnson-family-project" element={<JohnsonFamilyProject />} />
+          <Route path="/portfolio/jones-family-project" element={<JonesFamilyProject />} />
           <Route path="/portfolio/phillips-family-project" element={<PhillipsFamilyProject />} />
           <Route path="/portfolio/kieselhorst-family-project" element={<KieselhorstFamilyProject />} />
           <Route path="/portfolio/brown-family-project" element={<BrownFamilyProject />} />

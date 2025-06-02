@@ -19,35 +19,37 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const JohnsonFamilyProject = () => {
+const JonesFamilyProject = () => {
   const project = {
-    id: 'johnson-family-project',
-    title: 'Johnson Family Project',
-    subtitle: 'Custom Pool & Spa Design',
-    description: 'A stunning custom pool and spa built for the Johnson family, featuring modern design elements and premium finishes. This project showcases our commitment to creating beautiful, functional outdoor living spaces.',
+    id: 'jones-family-project',
+    title: 'Jones Family Project',
+    subtitle: 'Modern Pool with Raised Spa and Fire Features',
+    description: 'A stunning modern pool and raised spa built for the Jones family, featuring dramatic fire bowls, integrated LED lighting, and a spacious patio area perfect for entertaining. This project highlights contemporary design elements and seamless integration with the scenic lake view.',
     location: 'Houston, TX',
     category: 'Custom Pool & Spa',
-    size: 'Approx. 18,000 Gallons',
+    size: 'Custom Design',
     features: [
-      'Custom Pool Design',
-      'Integrated Spa',
-      'Premium Tile Finish',
-      'LED Lighting System',
-      'Automated Controls',
-      'Custom Decking'
+      'Modern Geometric Design',
+      'Raised Spa with Spillover',
+      'Integrated Fire Bowls',
+      'LED Pool and Spa Lighting',
+      'Spacious Concrete Decking',
+      'Scenic Lake View Integration'
     ],
     benefits: [
-      'Perfect for Family Entertainment',
-      'Year-Round Spa Enjoyment',
-      'Energy-Efficient Operation',
-      'Easy Maintenance',
-      'Enhanced Property Value',
-      'Beautiful Nighttime Ambiance'
+      'Enhanced Outdoor Entertainment',
+      'Relaxing Spa Experience',
+      'Dramatic Evening Ambiance',
+      'Increased Property Value',
+      'Year-Round Enjoyment',
+      'Beautiful Aesthetics'
     ],
     images: [
-      '/johnson-family-pool.jpg',
-      'https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
-      'https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
+      '/jones-family-pool-day-1.jpg',
+      '/jones-family-pool-night-1.jpg',
+      '/jones-family-pool-sunset.jpg',
+      '/jones-family-pool-day-2.jpg',
+      '/jones-family-pool-night-2.jpg',
     ]
   };
 
@@ -196,4 +198,4 @@ const JohnsonFamilyProject = () => {
   );
 };
 
-export default JohnsonFamilyProject; 
+export default JonesFamilyProject; 
