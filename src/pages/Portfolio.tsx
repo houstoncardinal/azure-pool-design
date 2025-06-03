@@ -52,7 +52,7 @@ export const projects = [
     id: 'jennings-family-project',
     title: 'Jennings Family Project',
     location: 'Pearland, TX',
-    image: '/jennings-family-pool.jpg',
+    image: '/jennings1.jpg',
     description: 'A perfect family pool design for the Jennings family, featuring a spacious layout, safety features, and fun elements.'
   },
   {
