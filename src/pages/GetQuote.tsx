@@ -161,6 +161,7 @@ const GetQuote = () => {
                         <Label htmlFor="phoneName">Your Name</Label>
                         <Input
                           id="phoneName"
+                          name="name"
                           placeholder="Enter your name"
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
@@ -171,6 +172,7 @@ const GetQuote = () => {
                         <Label htmlFor="phoneNumber">Phone Number</Label>
                         <Input
                           id="phoneNumber"
+                          name="phone"
                           placeholder="(832) 555-0123"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
@@ -203,6 +205,7 @@ const GetQuote = () => {
                         <Input
                           id="emailAddress"
                           type="email"
+                          name="email"
                           placeholder="your@email.com"
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
@@ -213,6 +216,7 @@ const GetQuote = () => {
                         <Label htmlFor="projectDetails">Project Details</Label>
                         <Textarea
                           id="projectDetails"
+                          name="notes"
                           placeholder="Tell us about your project (optional)"
                           value={formData.notes}
                           onChange={(e) => handleInputChange('notes', e.target.value)}
@@ -232,6 +236,7 @@ const GetQuote = () => {
                         <Label htmlFor="callbackName">Your Name</Label>
                         <Input
                           id="callbackName"
+                          name="name"
                           placeholder="Enter your name"
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
@@ -242,6 +247,7 @@ const GetQuote = () => {
                         <Label htmlFor="callbackPhone">Phone Number</Label>
                         <Input
                           id="callbackPhone"
+                          name="phone"
                           placeholder="(832) 555-0123"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
@@ -298,185 +304,285 @@ const GetQuote = () => {
                 </div>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {formStep === 1 ? (
-                  <>
-                    <div className="space-y-4">
-                      <div>
-                        <Label htmlFor="projectType">Project Type</Label>
-                        <Select value={formData.projectType} onValueChange={(value) => handleInputChange('projectType', value)}>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select project type" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="new-pool">New Pool Installation</SelectItem>
-                            <SelectItem value="renovation">Pool Renovation</SelectItem>
-                            <SelectItem value="maintenance">Pool Maintenance</SelectItem>
-                            <SelectItem value="repair">Pool Repair</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="poolSize">Estimated Pool Size</Label>
-                        <Select value={formData.poolSize} onValueChange={(value) => handleInputChange('poolSize', value)}>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select pool size" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="small">Small (10x20 ft)</SelectItem>
-                            <SelectItem value="medium">Medium (15x30 ft)</SelectItem>
-                            <SelectItem value="large">Large (20x40 ft)</SelectItem>
-                            <SelectItem value="custom">Custom Size</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="timeline">Timeline</Label>
-                        <Select value={formData.timeline} onValueChange={(value) => handleInputChange('timeline', value)}>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Project timeline" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="immediate">ASAP</SelectItem>
-                            <SelectItem value="1-3months">1-3 months</SelectItem>
-                            <SelectItem value="3-6months">3-6 months</SelectItem>
-                            <SelectItem value="6-12months">6-12 months</SelectItem>
-                            <SelectItem value="planning">Just planning ahead</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="features">Desired Features</Label>
-                        <div className="grid grid-cols-2 gap-4 mt-2">
-                          {[
-                            'Heating System',
-                            'Lighting',
-                            'Waterfall',
-                            'Hot Tub',
-                            'Automation',
-                            'Salt System'
-                          ].map((feature) => (
-                            <div key={feature} className="flex items-center space-x-2">
-                              <input 
-                                type="checkbox" 
-                                id={feature} 
-                                checked={formData.features.includes(feature)}
-                                onChange={(e) => handleFeatureChange(feature, e.target.checked)}
-                                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500" 
-                              />
-                              <label htmlFor={feature} className="text-sm text-gray-700">{feature}</label>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="notes">Additional Notes</Label>
-                        <Textarea 
-                          id="notes" 
-                          placeholder="Tell us about your vision for your pool..."
-                          value={formData.notes}
-                          onChange={(e) => handleInputChange('notes', e.target.value)}
-                          className="mt-2"
-                        />
-                      </div>
-                    </div>
-
-                    <Button 
-                      type="button"
-                      onClick={() => setFormStep(2)}
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                    >
-                      Continue to Contact Info
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Button>
-                  </>
-                ) : (
-                  <>
-                    <div className="space-y-4">
-                      <div>
-                        <Label htmlFor="name">Full Name</Label>
-                        <Input 
-                          id="name" 
-                          placeholder="Enter your full name" 
-                          value={formData.name}
-                          onChange={(e) => handleInputChange('name', e.target.value)}
-                          required
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="email">Email Address</Label>
-                        <Input 
-                          id="email" 
-                          type="email" 
-                          placeholder="Enter your email" 
-                          value={formData.email}
-                          onChange={(e) => handleInputChange('email', e.target.value)}
-                          required
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="phone">Phone Number</Label>
-                        <Input 
-                          id="phone" 
-                          type="tel" 
-                          placeholder="Enter your phone number" 
-                          value={formData.phone}
-                          onChange={(e) => handleInputChange('phone', e.target.value)}
-                        />
-                      </div>
-
-                      {contactMethod === 'callback' && (
+              <form name="get-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="get-quote" />
+                <div className="hidden">
+                  <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </div>
+                
+                <div className="space-y-6">
+                  {/* Step 1 Fields */}
+                  {formStep === 1 && (
+                    <>
+                      <div className="space-y-4">
                         <div>
-                          <Label htmlFor="preferredTime">Preferred Callback Time</Label>
-                          <Select value={formData.preferredCallbackTime} onValueChange={(value) => handleInputChange('preferredCallbackTime', value)}>
+                          <Label htmlFor="projectType">Project Type</Label>
+                          <Select value={formData.projectType} onValueChange={(value) => handleInputChange('projectType', value)}>
                             <SelectTrigger>
-                              <SelectValue placeholder="Select preferred time" />
+                              <SelectValue placeholder="Select project type" />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="morning">Morning (9AM - 12PM)</SelectItem>
-                              <SelectItem value="afternoon">Afternoon (12PM - 5PM)</SelectItem>
-                              <SelectItem value="evening">Evening (5PM - 8PM)</SelectItem>
+                              <SelectItem value="new-pool">New Pool Installation</SelectItem>
+                              <SelectItem value="renovation">Pool Renovation</SelectItem>
+                              <SelectItem value="maintenance">Pool Maintenance</SelectItem>
+                              <SelectItem value="repair">Pool Repair</SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
-                      )}
 
-                      <div>
-                        <Label htmlFor="address">Property Address</Label>
-                        <Input 
-                          id="address" 
-                          placeholder="Enter your property address" 
-                          value={formData.address}
-                          onChange={(e) => handleInputChange('address', e.target.value)}
-                        />
+                        <div>
+                          <Label htmlFor="poolSize">Estimated Pool Size</Label>
+                          <Select value={formData.poolSize} onValueChange={(value) => handleInputChange('poolSize', value)}>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select pool size" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="small">Small (10x20 ft)</SelectItem>
+                              <SelectItem value="medium">Medium (15x30 ft)</SelectItem>
+                              <SelectItem value="large">Large (20x40 ft)</SelectItem>
+                              <SelectItem value="custom">Custom Size</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+
+                        <div>
+                          <Label htmlFor="timeline">Project Timeline</Label>
+                          <Select value={formData.timeline} onValueChange={(value) => handleInputChange('timeline', value)}>
+                            <SelectTrigger>
+                              <SelectValue placeholder="Select timeline" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="immediate">Immediately</SelectItem>
+                              <SelectItem value="1-3months">1-3 Months</SelectItem>
+                              <SelectItem value="3-6months">3-6 Months</SelectItem>
+                              <SelectItem value="6+months">6+ Months</SelectItem>
+                              <SelectItem value="researching">Just Researching</SelectItem>
+                            </SelectContent>
+                          </Select>
+                        </div>
+
+                        <div>
+                          <Label htmlFor="features">Features of Interest</Label>
+                          <div className="mt-2 space-y-2">
+                            <div className="flex items-center">
+                              <input 
+                                type="checkbox" 
+                                id="feature-hottub" 
+                                name="features"
+                                value="Hot Tub Integration"
+                                checked={formData.features.includes('Hot Tub Integration')}
+                                onChange={(e) => handleFeatureChange('Hot Tub Integration', e.target.checked)}
+                                className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                              />
+                              <label htmlFor="feature-hottub" className="ml-2 block text-sm text-gray-900">Hot Tub Integration</label>
+                            </div>
+                            <div className="flex items-center">
+                              <input 
+                                type="checkbox" 
+                                id="feature-waterfall" 
+                                name="features"
+                                value="Waterfall/Water Features"
+                                checked={formData.features.includes('Waterfall/Water Features')}
+                                onChange={(e) => handleFeatureChange('Waterfall/Water Features', e.target.checked)}
+                                className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                              />
+                              <label htmlFor="feature-waterfall" className="ml-2 block text-sm text-gray-900">Waterfall/Water Features</label>
+                            </div>
+                            <div className="flex items-center">
+                              <input 
+                                type="checkbox" 
+                                id="feature-lighting" 
+                                name="features"
+                                value="LED Lighting"
+                                checked={formData.features.includes('LED Lighting')}
+                                onChange={(e) => handleFeatureChange('LED Lighting', e.target.checked)}
+                                className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                              />
+                              <label htmlFor="feature-lighting" className="ml-2 block text-sm text-gray-900">LED Lighting</label>
+                            </div>
+                            <div className="flex items-center">
+                              <input 
+                                type="checkbox" 
+                                id="feature-decking" 
+                                name="features"
+                                value="Custom Decking"
+                                checked={formData.features.includes('Custom Decking')}
+                                onChange={(e) => handleFeatureChange('Custom Decking', e.target.checked)}
+                                className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                              />
+                              <label htmlFor="feature-decking" className="ml-2 block text-sm text-gray-900">Custom Decking</label>
+                            </div>
+                            <div className="flex items-center">
+                              <input 
+                                type="checkbox" 
+                                id="feature-automation" 
+                                name="features"
+                                value="Automation System"
+                                checked={formData.features.includes('Automation System')}
+                                onChange={(e) => handleFeatureChange('Automation System', e.target.checked)}
+                                className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                              />
+                              <label htmlFor="feature-automation" className="ml-2 block text-sm text-gray-900">Automation System</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <Label htmlFor="address">Project Address (Optional)</Label>
+                          <Input
+                            id="address"
+                            name="address"
+                            placeholder="123 Main St, Anytown, TX"
+                            value={formData.address}
+                            onChange={(e) => handleInputChange('address', e.target.value)}
+                            className="mt-1"
+                          />
+                        </div>
+
+                        <div>
+                          <Label htmlFor="notes">Additional Notes (Optional)</Label>
+                          <Textarea
+                            id="notes"
+                            name="notes"
+                            placeholder="Any specific requests or details..."
+                            value={formData.notes}
+                            onChange={(e) => handleInputChange('notes', e.target.value)}
+                            className="mt-1"
+                            rows={4}
+                          />
+                        </div>
                       </div>
-                    </div>
 
-                    <div className="space-y-4">
-                      <Button 
-                        type="button"
-                        onClick={() => setFormStep(1)}
-                        className="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-50"
-                      >
-                        Back to Project Details
+                      <Button type="button" onClick={() => setFormStep(2)} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium group">
+                        Next: Your Contact Info
+                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                       </Button>
+                    </>
+                  )}
+
+                  {/* Step 2 Fields */}
+                  {formStep === 2 && (
+                    <>
+                      <div className="space-y-4">
+                        <div>
+                          <Label htmlFor="name">Your Name</Label>
+                          <Input
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            value={formData.name}
+                            onChange={(e) => handleInputChange('name', e.target.value)}
+                            required
+                            className="mt-1"
+                          />
+                        </div>
+                        
+                        {/* Conditional Contact Fields based on method chosen on left */}
+                        {contactMethod === 'phone' && (
+                           <div>
+                            <Label htmlFor="phone">Phone Number</Label>
+                            <Input
+                              id="phone"
+                              name="phone"
+                              placeholder="(832) 555-0123"
+                              value={formData.phone}
+                              onChange={(e) => handleInputChange('phone', e.target.value)}
+                              required
+                              className="mt-1"
+                            />
+                          </div>
+                        )}
+
+                        {contactMethod === 'email' && (
+                          <div>
+                            <Label htmlFor="email">Email Address</Label>
+                            <Input
+                              id="email"
+                              type="email"
+                              name="email"
+                              placeholder="your@email.com"
+                              value={formData.email}
+                              onChange={(e) => handleInputChange('email', e.target.value)}
+                              required
+                              className="mt-1"
+                            />
+                          </div>
+                        )}
+
+                        {contactMethod === 'callback' && (
+                           <>
+                            <div>
+                              <Label htmlFor="callbackName">Your Name</Label>
+                              <Input
+                                id="callbackName"
+                                name="name"
+                                placeholder="Enter your name"
+                                value={formData.name}
+                                onChange={(e) => handleInputChange('name', e.target.value)}
+                                required
+                                className="mt-1"
+                              />
+                            </div>
+                             <div>
+                              <Label htmlFor="phone">Phone Number</Label>
+                              <Input
+                                id="phone"
+                                name="phone"
+                                placeholder="(832) 555-0123"
+                                value={formData.phone}
+                                onChange={(e) => handleInputChange('phone', e.target.value)}
+                                required
+                                className="mt-1"
+                              />
+                            </div>
+                             <div>
+                              <Label htmlFor="callTime">Preferred Callback Time</Label>
+                              <Select value={formData.preferredCallbackTime} onValueChange={(value) => handleInputChange('preferredCallbackTime', value)}>
+                                <SelectTrigger>
+                                  <SelectValue placeholder="Select preferred time" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                  <SelectItem value="morning">Morning (9AM - 12PM)</SelectItem>
+                                  <SelectItem value="afternoon">Afternoon (12PM - 5PM)</SelectItem>
+                                  <SelectItem value="evening">Evening (5PM - 8PM)</SelectItem>
+                                </SelectContent>
+                              </Select>
+                            </div>
+                           </>
+                        )}
+
+                         {contactMethod === 'email' && (
+                          <div>
+                            <Label htmlFor="email">Email Address</Label>
+                            <Input
+                              id="email"
+                              type="email"
+                              name="email"
+                              placeholder="your@email.com"
+                              value={formData.email}
+                              onChange={(e) => handleInputChange('email', e.target.value)}
+                              required
+                              className="mt-1"
+                            />
+                          </div>
+                        )}
+                      </div>
+
+                      <Button type="button" onClick={() => setFormStep(1)} className="w-full bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium group">
+                        Back
+                      </Button>
+
                       <Button 
                         type="submit"
                         disabled={isLoading}
-                        className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium group"
                       >
-                        {isLoading ? 'Submitting...' : 'Submit Quote Request'}
-                        <ArrowRight className="ml-2 h-5 w-5" />
+                        {isLoading ? 'Submitting...' : 'Get Free Quote'}
+                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                       </Button>
-                    </div>
-                  </>
-                )}
+                    </>
+                  )}
+                </div>
               </form>
             </div>
           </div>

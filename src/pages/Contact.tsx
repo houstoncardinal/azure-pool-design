@@ -168,7 +168,12 @@ const Contact = () => {
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6 sm:p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" className="space-y-6">
+                  <input type="hidden" name="form-name" value="contact" />
+                  <div className="hidden">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                  </div>
+                  
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -176,6 +181,7 @@ const Contact = () => {
                       </label>
                       <Input
                         id="name"
+                        name="name"
                         type="text"
                         placeholder="John Doe"
                         value={formData.name}
@@ -190,6 +196,7 @@ const Contact = () => {
                       </label>
                       <Input
                         id="email"
+                        name="email"
                         type="email"
                         placeholder="john@example.com"
                         value={formData.email}
@@ -206,6 +213,7 @@ const Contact = () => {
                     </label>
                     <Input
                       id="phone"
+                      name="phone"
                       type="tel"
                       placeholder="(555) 123-4567"
                       value={formData.phone}
@@ -220,6 +228,7 @@ const Contact = () => {
                     </label>
                     <Input
                       id="subject"
+                      name="subject"
                       type="text"
                       placeholder="How can we help you?"
                       value={formData.subject}
@@ -234,6 +243,7 @@ const Contact = () => {
                     </label>
                     <Textarea
                       id="message"
+                      name="message"
                       placeholder="Tell us about your project..."
                       value={formData.message}
                       onChange={handleInputChange}
