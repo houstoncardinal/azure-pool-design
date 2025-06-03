@@ -368,3 +368,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Prevent specific elements from causing overflow if necessary */
 /* Example: */
 /* .container { overflow-x: hidden; } */
+
+/* Custom styles for Tidio widget on mobile to prevent overlap with toolbar */
+@media (max-width: 768px) {
+  .tidio-chat { /* This is a common class name, might need adjustment */
+    bottom: 80px !important; /* Adjust the value based on your toolbar height */
+  }
+}
