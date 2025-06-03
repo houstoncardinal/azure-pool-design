@@ -23,9 +23,9 @@ export const projects = [
   {
     id: 'blount-family-project',
     title: 'Blount Family Project',
-    location: 'Alvin, TX',
+    location: 'Pearland, TX',
     image: '/blount1.jpg',
-    description: 'A beautiful pool project for the Blount family.'
+    description: 'A stunning transformation that reflects luxury, comfort, and craftsmanship.'
   },
   {
     id: 'brown-family-project',

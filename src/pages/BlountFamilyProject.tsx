@@ -23,26 +23,20 @@ const BlountFamilyProject = () => {
   const project = {
     id: 'blount-family-project',
     title: 'Blount Family Project',
-    subtitle: 'Custom Pool Design and Outdoor Living Space',
-    description: 'A stunning custom pool and integrated outdoor living area designed for the Blount family. This project features a beautiful pool shape, ample patio space, and is perfect for relaxation and entertaining.',
-    location: 'Alvin, TX',
-    category: 'Custom Pool & Outdoor Living',
+    subtitle: 'A Signature Outdoor Experience',
+    description: 'We had the privilege of bringing the Blount Family\'s dream backyard to life in Pearland, Texas — a stunning transformation that reflects luxury, comfort, and craftsmanship.',
+    location: 'Pearland, TX',
+    category: 'Custom Pool & Spa',
     size: 'Custom Design',
     features: [
-      'Custom Pool Shape',
-      'Integrated Spa',
-      'Spacious Patio Area',
-      'Quality Decking Materials',
-      'Professional Landscaping',
-      'Outdoor Lighting'
+      'Elegant travertine decking',
+      'Handcrafted custom fireplace and glowing fire bowl',
+      'Midnight blue plaster finish',
     ],
     benefits: [
-      'Enhanced Backyard Aesthetics',
-      'Ideal for Entertaining Guests',
-      'Increased Property Value',
-      'Relaxing Aquatic Features',
-      'Durable Construction',
-      'Personalized Design'
+      'Seamless integration of pool and elevated spa',
+      'Thoughtfully designed flow and symmetry for both form and function',
+      'Breathtaking outdoor space perfect for relaxation, entertainment, and lasting memories',
     ],
     images: [
       '/blount1.jpg',
