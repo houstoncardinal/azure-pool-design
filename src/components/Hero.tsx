@@ -108,8 +108,10 @@ const Hero = () => {
                 </div>
               </div>
               
-              <Button className="w-full mt-6 bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg">
-                View Our Portfolio
+              <Button className="w-full mt-6 bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg" asChild>
+                <Link to="/portfolio">
+                  View Our Portfolio
+                </Link>
               </Button>
             </div>
           </div>
