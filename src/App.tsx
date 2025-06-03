@@ -34,6 +34,8 @@ import HotTubIntegration from './pages/HotTubIntegration';
 import ProfessionalInstallation from './pages/ProfessionalInstallation';
 import JonesFamilyProject from './pages/JonesFamilyProject';
 import MobileToolbar from './components/MobileToolbar';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 const queryClient = new QueryClient();
 
@@ -88,6 +90,9 @@ const App = () => (
             <Route path="/modern-pool-designs" element={<ModernPoolDesigns />} />
             <Route path="/hot-tub-integration" element={<HotTubIntegration />} />
             <Route path="/professional-installation" element={<ProfessionalInstallation />} />
+            {/* Legal Pages */}
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
           </Routes>
           <MobileToolbar />
         </BrowserRouter>
