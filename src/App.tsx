@@ -12,7 +12,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Portfolio from './pages/Portfolio';
 import PhillipsFamilyProject from './pages/PhillipsFamilyProject';
-import KieselhorstFamilyProject from './pages/KieselhorstFamilyProject';
+import BlountFamilyProject from './pages/BlountFamilyProject';
 import BrownFamilyProject from './pages/BrownFamilyProject';
 import RobinsonFamilyProject from './pages/RobinsonFamilyProject';
 import RuckerFamilyProject from './pages/RuckerFamilyProject';
@@ -65,7 +65,7 @@ const App = () => (
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/jones-family-project" element={<JonesFamilyProject />} />
           <Route path="/portfolio/phillips-family-project" element={<PhillipsFamilyProject />} />
-          <Route path="/portfolio/kieselhorst-family-project" element={<KieselhorstFamilyProject />} />
+          <Route path="/portfolio/blount-family-project" element={<BlountFamilyProject />} />
           <Route path="/portfolio/brown-family-project" element={<BrownFamilyProject />} />
           <Route path="/portfolio/robinson-family-project" element={<RobinsonFamilyProject />} />
           <Route path="/portfolio/rucker-family-project" element={<RuckerFamilyProject />} />

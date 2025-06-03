@@ -19,35 +19,40 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const KieselhorstFamilyProject = () => {
+const BlountFamilyProject = () => {
   const project = {
-    id: 'kieselhorst-family-project',
-    title: 'Kieselhorst Family Project',
-    subtitle: 'Luxury Geometric Pool Design',
-    description: 'A sophisticated geometric pool design for the Kieselhorst family, featuring clean lines and premium materials. This project showcases our expertise in creating elegant, modern outdoor spaces.',
+    id: 'blount-family-project',
+    title: 'Blount Family Project',
+    subtitle: 'Custom Pool Design and Outdoor Living Space',
+    description: 'A stunning custom pool and integrated outdoor living area designed for the Blount family. This project features a beautiful pool shape, ample patio space, and is perfect for relaxation and entertaining.',
     location: 'Alvin, TX',
-    category: 'Luxury Geometric Pool',
-    size: 'Approx. 20,000 Gallons',
+    category: 'Custom Pool & Outdoor Living',
+    size: 'Custom Design',
     features: [
-      'Geometric Pool Design',
-      'Premium Tile Selection',
-      'Custom Water Features',
-      'LED Lighting System',
-      'Automated Controls',
-      'High-End Decking'
+      'Custom Pool Shape',
+      'Integrated Spa',
+      'Spacious Patio Area',
+      'Quality Decking Materials',
+      'Professional Landscaping',
+      'Outdoor Lighting'
     ],
     benefits: [
-      'Modern Aesthetic',
-      'Enhanced Property Value',
-      'Perfect for Entertainment',
-      'Easy Maintenance',
-      'Energy Efficiency',
-      'Year-Round Enjoyment'
+      'Enhanced Backyard Aesthetics',
+      'Ideal for Entertaining Guests',
+      'Increased Property Value',
+      'Relaxing Aquatic Features',
+      'Durable Construction',
+      'Personalized Design'
     ],
     images: [
-      '/kieselhorst-family-pool.jpg',
-      'https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
-      'https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
+      '/blount1.jpg',
+      '/blount2.jpg',
+      '/blount3.jpg',
+      '/blount4.jpg',
+      '/blount5.jpg',
+      '/blount6.jpg',
+      '/blount7.jpg',
+      '/blount8.jpg',
     ]
   };
 
@@ -196,4 +201,4 @@ const KieselhorstFamilyProject = () => {
   );
 };
 
-export default KieselhorstFamilyProject; 
+export default BlountFamilyProject; 

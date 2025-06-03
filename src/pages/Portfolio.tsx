@@ -21,11 +21,11 @@ export const projects = [
     description: 'Modern pool design with integrated smart features.'
   },
   {
-    id: 'kieselhorst-family-project',
-    title: 'Kieselhorst Family Project',
+    id: 'blount-family-project',
+    title: 'Blount Family Project',
     location: 'Alvin, TX',
-    image: '/kieselhorst-family-pool.jpg',
-    description: 'Luxury geometric pool with extensive decking.'
+    image: '/blount1.jpg',
+    description: 'A beautiful pool project for the Blount family.'
   },
   {
     id: 'brown-family-project',
