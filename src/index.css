@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,8 +28,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 214.3 31.6% 91.4%;
+    --input: 214.3 31.6% 91.4%;
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
@@ -92,6 +91,11 @@
   body {
     @apply bg-background text-foreground font-inter antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+  }
+
+  #root {
+    overflow-x: hidden;
   }
 
   html {
@@ -264,18 +268,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
-  border-radius: 4px;
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+  background: #888;
   border-radius: 4px;
-  transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #0284c7, #0369a1);
+  background: #555;
 }
 
 /* Selection */
@@ -321,3 +323,48 @@
   transform: translate3d(0, 0, 0);
   will-change: transform;
 }
+
+/* Add custom styles here */
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Hide the horizontal scrollbar but keep vertical */
+body {
+  overflow-x: hidden;
+}
+
+/* Adjust for potential box-sizing issues */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive text for headings */
+h1, h2, h3, h4, h5, h6 {
+  word-break: break-word;
+}
+
+/* Prevent specific elements from causing overflow if necessary */
+/* Example: */
+/* .container { overflow-x: hidden; } */

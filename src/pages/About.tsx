@@ -163,12 +163,12 @@ const About = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl opacity-20 blur-xl"></div>
               <div className="relative grid grid-cols-2 gap-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="/blount8.jpg"
                   alt="Pool maintenance service"
                   className="w-full h-[300px] object-cover rounded-2xl shadow-xl"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="/phillips2.jpg"
                   alt="Luxury pool design"
                   className="w-full h-[300px] object-cover rounded-2xl shadow-xl mt-8"
                 />
