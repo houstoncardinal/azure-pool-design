@@ -49,7 +49,7 @@ const JonesFamilyProject = () => {
       '/jones-family-pool-night-1.jpg',
       '/jones-family-pool-sunset.jpg',
       '/jones-family-pool-day-2.jpg',
-      '/jones-family-pool-night-2.jpg',
+      '/jones-family-pool-night-2.JPG',
     ]
   };
 
