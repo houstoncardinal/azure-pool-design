@@ -1,7 +1,6 @@
 import React from 'react';
-import { ExternalLink, MapPin, Star, Award, ArrowRight, Quote } from 'lucide-react';
+import { ExternalLink, MapPin, Star, Award, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
 import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
@@ -36,29 +35,6 @@ const Portfolio = () => {
       features: ["Modern Pool", "Landscape Integration", "Entertainment Space"],
       link: "/portfolio/rucker-family-project",
     },
-  ];
-
-  const testimonials = [
-    {
-      name: "Jeremy B.",
-      review: "Great service and response. Blue Touch Pools was able to work with my budget on building the pool of my dreams. My project was completed in 60 days! Great service and response by Gary and my project manager on the job!"
-    },
-    {
-      name: "Luke M.",
-      review: "Responsive, reliable, and friendly. Gary and his team are responsive, reliable, and friendly. He has been taking care of my pool for years. I love that they send me a text each week explaining what they did for service and send pictures!"
-    },
-    {
-      name: "Jarett L.",
-      review: "Wouldn't consider going anywhere else. I've used blue touch pool service for years now and love every bit of it. I never have to worry if my pool will be clean as they come every week at the same time. Wouldn't consider going anywhere else."
-    },
-    {
-      name: "Chelsea L.",
-      review: "Top notch business. Blu Touch Pool Service is a top notch business. If you are looking for a detailed, customer service-oriented company definitely go with Blu Touch. They also build pools if you need one."
-    },
-    {
-      name: "Lori M.",
-      review: "Professional and courteous. The Blu Touch team are professional and courteous. They are dependable and always do a great job cleaning our pool. We have used them for several years and are very pleased with their service."
-    }
   ];
 
   return (
@@ -136,41 +112,6 @@ const Portfolio = () => {
           <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 font-semibold" asChild>
             <a href="/portfolio">View All Projects</a>
           </Button>
-        </div>
-
-        {/* Client Testimonials Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Client Testimonials</h3>
-            <p className="text-xl text-gray-600">What our satisfied customers are saying about BluTouch Pools & Spas</p>
-          </div>
-          
-          {/* Carousel for Testimonials - Full Width & Responsive */}
-          <div className="relative w-full px-0 sm:px-4 md:px-8 lg:px-0">
-            <Carousel opts={{ loop: true, align: 'center' }}>
-              <CarouselContent className="gap-6 md:gap-8">
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem
-                    key={index}
-                    className="px-2 sm:px-4 md:px-6 lg:px-8 basis-full md:basis-1/2 lg:basis-1/3 flex justify-center"
-                  >
-                    <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 md:p-8 border border-gray-200 shadow-lg flex flex-col items-center w-full h-full max-w-md transition-all duration-500 ease-in-out">
-                      <Quote className="w-8 h-8 text-blue-600 mb-4" />
-                      <div className="flex mb-2">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400 mr-1" />
-                        ))}
-                      </div>
-                      <p className="text-gray-700 mb-4 italic text-center">"{testimonial.review}"</p>
-                      <p className="font-semibold text-gray-900">- {testimonial.name}</p>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
         </div>
 
         {/* Enhanced View More Section */}

@@ -27,21 +27,33 @@ const Hero = () => {
 
             {/* Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-              <div className="flex items-center text-gray-700">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                <span className="font-medium">Free Estimates</span>
+              <div className="group flex items-center text-gray-700 relative cursor-pointer">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 transition-transform duration-300 group-hover:scale-110" />
+                <span className="font-medium relative">
+                  Free Estimates
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ocean-500 transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </div>
-              <div className="flex items-center text-gray-700">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                <span className="font-medium">3-D Reality View</span>
+              <div className="group flex items-center text-gray-700 relative cursor-pointer">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 transition-transform duration-300 group-hover:scale-110" />
+                <span className="font-medium relative">
+                  3-D Reality View
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ocean-500 transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </div>
-              <div className="flex items-center text-gray-700">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                <span className="font-medium">Personal Consultations</span>
+              <div className="group flex items-center text-gray-700 relative cursor-pointer">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 transition-transform duration-300 group-hover:scale-110" />
+                <span className="font-medium relative">
+                  Personal Consultations
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ocean-500 transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </div>
-              <div className="flex items-center text-gray-700">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                <span className="font-medium">Custom Designs</span>
+              <div className="group flex items-center text-gray-700 relative cursor-pointer">
+                <CheckCircle className="w-5 h-5 text-green-500 mr-3 transition-transform duration-300 group-hover:scale-110" />
+                <span className="font-medium relative">
+                  Custom Designs
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-ocean-500 transition-all duration-300 group-hover:w-full"></span>
+                </span>
               </div>
             </div>
             
