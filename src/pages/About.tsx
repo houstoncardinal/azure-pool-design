@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Award, Users, Heart, Star, CheckCircle, Phone, MapPin, ArrowRight, Calendar, Building2, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -33,7 +34,7 @@ const About = () => {
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">
-                For over a decade, Blu Touch Pools has been transforming Houston's backyards into extraordinary aquatic sanctuaries. Our journey is built on craftsmanship, innovation, and an unwavering commitment to customer satisfaction.
+                For over a decade, BluTouch Pools & Spas has been transforming Houston's backyards into extraordinary aquatic sanctuaries. Our journey is built on craftsmanship, innovation, and an unwavering commitment to customer satisfaction.
               </p>
 
               {/* Stats Grid */}
@@ -61,18 +62,24 @@ const About = () => {
                 <Button 
                   size="lg" 
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-sm hover:shadow-md transition-all duration-300 group"
+                  asChild
                 >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Schedule a Consultation
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  <Link to="/get-quote">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Schedule a Consultation
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg" 
                   className="border-2 border-gray-200 text-gray-700 hover:bg-gray-50 px-8 py-4 text-lg font-semibold rounded-lg group"
+                  asChild
                 >
-                  <Sparkles className="mr-2 h-5 w-5 text-blue-600" />
-                  View Our Work
+                  <Link to="/portfolio">
+                    <Sparkles className="mr-2 h-5 w-5 text-blue-600" />
+                    View Our Work
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -172,7 +179,7 @@ const About = () => {
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">Expert Service & Attention to Detail</h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Providing proper care for your pool does not require genius; it simply requires a person that will provide consistent attention to the little details, and that is our goal at Blu Touch Pools Service LLC.
+                  Providing proper care for your pool does not require genius; it simply requires a person that will provide consistent attention to the little details, and that is our goal at BluTouch Pools & Spas Service LLC.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed mb-8">
                   With over 10 years' experience in the field of swimming pool maintenance, we have developed a service plan that helps us maintain sparkling pools. We also have an award-winning pool design team that specializes in new pool construction and pool remodeling.
@@ -220,10 +227,14 @@ const About = () => {
           </div>
           
           <div className="mt-12">
-            <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg group">
-              <Phone className="mr-2 h-5 w-5" />
-              Call (832) 961-0258
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <Button 
+              className="border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-6"
+              asChild
+            >
+              <a href="tel:8329610258">
+                <Phone className="mr-2 h-5 w-5" />
+                Call (832) 961-0258
+              </a>
             </Button>
           </div>
         </div>

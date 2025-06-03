@@ -155,7 +155,7 @@ const WhiteFamilyProject = () => {
                 </Button>
                 <Button 
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-6"
+                  className="border-2 border-white text-blue-100 hover:bg-white/10 font-semibold py-3 px-6"
                 >
                   <Phone className="mr-2 h-5 w-5" />
                   Call (832) 961-0258

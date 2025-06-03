@@ -16,7 +16,7 @@ import {
 const service = {
   icon: Shield,
   title: "Modern Pool Designs",
-  description: "Step into the future of outdoor living with stunning modern pool designs from Blu Touch Pools in Houston. We specialize in creating sleek, contemporary pools that feature clean lines, minimalist aesthetics, and integrated smart technology. Our design team works closely with you to envision a pool that is not only a beautiful focal point for your backyard but also a highly functional and energy-efficient swimming environment. Discover how modern design principles can transform your outdoor space into a sophisticated oasis.",
+  description: "Step into the future of outdoor living with stunning modern pool designs from BluTouch Pools & Spas in Houston. We specialize in creating sleek, contemporary pools that feature clean lines, minimalist aesthetics, and integrated smart technology. Our design team works closely with you to envision a pool that is not only a beautiful focal point for your backyard but also a highly functional and energy-efficient swimming environment. Discover how modern design principles can transform your outdoor space into a sophisticated oasis.",
   features: [
     "Minimalist and Geometric Pool Shapes",
     "Integration of Smart Pool Technology (Automation, Lighting)",
@@ -83,13 +83,12 @@ const ModernPoolDesigns = () => {
                 Get a Free Quote
               </Link>
             </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-blue-700 hover:bg-white hover:text-blue-700 font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Call (832) 961-0258
+            <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg group" asChild>
+              <a href="tel:8329610258">
+                <Phone className="mr-2 h-5 w-5" />
+                Call (832) 961-0258
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
           </div>
         </div>
@@ -138,7 +137,7 @@ const ModernPoolDesigns = () => {
                 Modern pool design is about more than just a place to swim; it's about creating a cohesive outdoor living environment that reflects contemporary style and incorporates the latest technology.
               </p>
               <p>
-                At Blu Touch Pools, our designers are experts in translating modern architectural principles into stunning poolscapes throughout the Houston area. We focus on clean lines, geometric shapes, and a seamless integration with your home and landscape.
+                At BluTouch Pools & Spas, our designers are experts in translating modern architectural principles into stunning poolscapes throughout the Houston area. We focus on clean lines, geometric shapes, and a seamless integration with your home and landscape.
               </p>
             </div>
 
@@ -156,7 +155,7 @@ const ModernPoolDesigns = () => {
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <p className="mb-4">
-                Choosing a modern pool design from Blu Touch Pools means investing in a sophisticated and functional outdoor space that will be the envy of your neighbors.
+                Choosing a modern pool design from BluTouch Pools & Spas means investing in a sophisticated and functional outdoor space that will be the envy of your neighbors.
               </p>
               <p>
                 We are committed to delivering a design that is not only visually striking but also perfectly suited to your lifestyle and the unique characteristics of your Houston property.
@@ -195,13 +194,11 @@ const ModernPoolDesigns = () => {
                   Get Your Free Estimate
                 </Link>
               </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-blue-700 hover:bg-white hover:text-blue-700 font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Call (832) 961-0258
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white group-hover:shadow-lg transition-all duration-300" asChild>
+                <a href="tel:8329610258">
+                  <Phone className="w-4 h-4 mr-2" />
+                  (832) 961-0258
+                </a>
               </Button>
             </div>
           </div>

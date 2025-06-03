@@ -71,7 +71,7 @@ const App = () => (
           <Route path="/portfolio/rucker-family-project" element={<RuckerFamilyProject />} />
           <Route path="/portfolio/jennings-family-project" element={<JenningsFamilyProject />} />
           <Route path="/portfolio/tems-family-project" element={<TemsFamilyProject />} />
-          <Route path="/portfolio/myer-family-project" element={<MyerFamilyProject />} />
+          <Route path="/portfolio/myers-family-project" element={<MyerFamilyProject />} />
           <Route path="/portfolio/serene-escape-project" element={<SereneEscapeProject />} />
           <Route path="/portfolio/modern-retreat-project" element={<ModernRetreatProject />} />
           <Route path="/portfolio/coastal-oasis-project" element={<CoastalOasisProject />} />

@@ -16,7 +16,7 @@ import {
 const service = {
   icon: Wrench,
   title: "Pool Upgrades & Repairs",
-  description: "Keep your pool in peak condition and enhance its functionality and aesthetics with expert pool upgrades and repairs from Blu Touch Pools in Houston. Whether your pool equipment needs fixing, you're looking to modernize your system, or the pool surface requires attention, our licensed and experienced technicians are ready to help. We provide reliable, efficient, and affordable solutions to address any issue and improve your swimming experience. Trust us to use quality parts and deliver lasting repairs and valuable upgrades that breathe new life into your pool.",
+  description: "Keep your pool in peak condition and enhance its functionality and aesthetics with expert pool upgrades and repairs from BluTouch Pools & Spas in Houston. Whether your pool equipment needs fixing, you're looking to modernize your system, or the pool surface requires attention, our licensed and experienced technicians are ready to help. We provide reliable, efficient, and affordable solutions to address any issue and improve your swimming experience. Trust us to use quality parts and deliver lasting repairs and valuable upgrades that breathe new life into your pool.",
   features: [
     "Diagnostic and Repair Services for All Pool Equipment",
     "Energy-Efficient Pump and Filter Upgrades",
@@ -64,7 +64,7 @@ const UpgradesRepairs = () => {
           </h1>
           <div className="max-w-3xl mx-auto space-y-4">
             <p className="text-base sm:text-lg lg:text-xl text-blue-100 leading-relaxed">
-              Keep your pool in peak condition and enhance its functionality and aesthetics with expert pool upgrades and repairs from Blu Touch Pools in Houston.
+              Keep your pool in peak condition and enhance its functionality and aesthetics with expert pool upgrades and repairs from BluTouch Pools & Spas in Houston.
             </p>
             <p className="text-base sm:text-lg lg:text-xl text-blue-100 leading-relaxed">
               Whether your pool equipment needs fixing, you're looking to modernize your system, or the pool surface requires attention, our licensed and experienced technicians are ready to help.
@@ -86,13 +86,12 @@ const UpgradesRepairs = () => {
                 Get a Free Quote
               </Link>
             </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-blue-700 hover:bg-white hover:text-blue-700 font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Call (832) 961-0258
+            <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg group" asChild>
+              <a href="tel:8329610258">
+                <Phone className="mr-2 h-5 w-5" />
+                Call (832) 961-0258
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
           </div>
         </div>
@@ -138,7 +137,7 @@ const UpgradesRepairs = () => {
           <div className="prose prose-lg text-gray-700 mx-auto leading-relaxed space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <p className="mb-4">
-                Is your pool equipment malfunctioning? Do you want to enhance your pool's features or improve its energy efficiency? Blu Touch Pools provides comprehensive pool repair and upgrade services throughout the Houston area.
+                Is your pool equipment malfunctioning? Do you want to enhance your pool's features or improve its energy efficiency? BluTouch Pools & Spas provides comprehensive pool repair and upgrade services throughout the Houston area.
               </p>
               <p>
                 We understand that a damaged or outdated pool can detract from your enjoyment and even lead to higher operating costs. Our skilled technicians are equipped to handle everything from minor repairs to major system overhauls.
@@ -156,7 +155,7 @@ const UpgradesRepairs = () => {
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <p className="mb-4">
-                Whether it's a leak, a broken pump, or a desire for a complete pool renovation, Blu Touch Pools is your trusted partner for reliable pool upgrades and repairs in Houston.
+                Whether it's a leak, a broken pump, or a desire for a complete pool renovation, BluTouch Pools & Spas is your trusted partner for reliable pool upgrades and repairs in Houston.
               </p>
               <p>
                 We are committed to restoring your pool's function and beauty, ensuring it remains a source of fun and relaxation for years to come.
@@ -184,7 +183,7 @@ const UpgradesRepairs = () => {
       <section className="py-16 lg:py-24 bg-blue-700 text-white text-center">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Upgrade or Repair Your Pool?</h2>
-            <p className="text-lg text-blue-100 mb-10">Contact Blu Touch Pools today for a consultation and a free estimate. Let us help you keep your pool in perfect condition.</p>
+            <p className="text-lg text-blue-100 mb-10">Contact BluTouch Pools & Spas today for a consultation and a free estimate. Let us help you keep your pool in perfect condition.</p>
              <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 size="lg"
@@ -195,13 +194,11 @@ const UpgradesRepairs = () => {
                   Get Your Free Estimate
                 </Link>
               </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-blue-700 hover:bg-white hover:text-blue-700 font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Call (832) 961-0258
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white group-hover:shadow-lg transition-all duration-300" asChild>
+                <a href="tel:8329610258">
+                  <Phone className="w-4 h-4 mr-2" />
+                  (832) 961-0258
+                </a>
               </Button>
             </div>
           </div>

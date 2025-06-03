@@ -141,7 +141,7 @@ const Portfolio = () => {
         <div className="mb-16">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Client Testimonials</h3>
-            <p className="text-xl text-gray-600">What our satisfied customers are saying about Blu Touch Pools</p>
+            <p className="text-xl text-gray-600">What our satisfied customers are saying about BluTouch Pools & Spas</p>
           </div>
           
           {/* Carousel for Testimonials - Full Width & Responsive */}
@@ -178,7 +178,7 @@ const Portfolio = () => {
             Start Your Pool Project Today
           </h3>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            We love hearing from our community. For general questions, concerns & information - contact Blu Touch Pools now! Give us the opportunity to service your swimming pool and we will prove why we are the best pool service company around.
+            We love hearing from our community. For general questions, concerns & information - contact BluTouch Pools & Spas now! Give us the opportunity to service your swimming pool and we will prove why we are the best pool service company around.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Button 

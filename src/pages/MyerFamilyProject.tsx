@@ -21,33 +21,32 @@ import { Link } from 'react-router-dom';
 
 const MyerFamilyProject = () => {
   const project = {
-    id: 'myer-family-project',
-    title: 'Myer Family Project',
-    subtitle: 'Luxury Pool & Outdoor Entertainment',
-    description: 'An exceptional pool design for the Myer family, featuring premium materials and sophisticated entertainment features. This project creates a stunning outdoor living space perfect for hosting and relaxation.',
+    id: 'myers-family-project',
+    title: 'Myers Family Project',
+    subtitle: 'Luxury Pool & Outdoor Entertainment Space',
+    description: 'An exceptional pool design for the Myers family, featuring premium materials and sophisticated entertainment features.',
     location: 'Alvin, TX',
     category: 'Luxury Pool Design',
-    size: 'Approx. 21,000 Gallons',
+    size: 'Approx. 22,000 Gallons',
     features: [
       'Luxury Pool Design',
       'Outdoor Kitchen',
-      'Premium Tile Work',
-      'Water Features',
-      'LED Lighting System',
-      'Smart Controls'
+      'Custom Decking',
+      'LED Lighting',
+      'Smart Controls',
+      'Water Features'
     ],
     benefits: [
       'Perfect for Entertaining',
-      'Enhanced Property Value',
-      'Luxury Experience',
+      'Enhanced Outdoor Living',
+      'Luxury Aesthetic',
       'Easy Maintenance',
-      'Energy Efficient',
+      'Energy Efficiency',
       'Year-Round Enjoyment'
     ],
     images: [
-      '/myer-family-pool.jpg',
-      'https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
-      'https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
+      '/myers1.jpg',
+      '/myers2.jpg'
     ]
   };
 
@@ -154,11 +153,13 @@ const MyerFamilyProject = () => {
                   </Link>
                 </Button>
                 <Button 
-                  variant="outline"
                   className="border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-6"
+                  asChild
                 >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call (832) 961-0258
+                  <a href="tel:8329610258">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Call (832) 961-0258
+                  </a>
                 </Button>
               </div>
             </div>

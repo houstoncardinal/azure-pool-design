@@ -151,10 +151,110 @@ const GetQuote = () => {
                     </Label>
                   </div>
                 </RadioGroup>
+
+                {/* Conditional Contact Method Sections */}
+                {contactMethod === 'phone' && (
+                  <div className="mt-6 p-6 bg-blue-50 rounded-xl border border-blue-100">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Schedule a Phone Call</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <Label htmlFor="phoneName">Your Name</Label>
+                        <Input
+                          id="phoneName"
+                          placeholder="Enter your name"
+                          value={formData.name}
+                          onChange={(e) => handleInputChange('name', e.target.value)}
+                          className="mt-1"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="phoneNumber">Phone Number</Label>
+                        <Input
+                          id="phoneNumber"
+                          placeholder="(832) 555-0123"
+                          value={formData.phone}
+                          onChange={(e) => handleInputChange('phone', e.target.value)}
+                          className="mt-1"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="callTime">Best Time to Call</Label>
+                        <Select value={formData.preferredCallbackTime} onValueChange={(value) => handleInputChange('preferredCallbackTime', value)}>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select preferred time" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="morning">Morning (9AM - 12PM)</SelectItem>
+                            <SelectItem value="afternoon">Afternoon (12PM - 5PM)</SelectItem>
+                            <SelectItem value="evening">Evening (5PM - 8PM)</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {contactMethod === 'email' && (
+                  <div className="mt-6 p-6 bg-blue-50 rounded-xl border border-blue-100">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Email Quote Request</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <Label htmlFor="emailAddress">Email Address</Label>
+                        <Input
+                          id="emailAddress"
+                          type="email"
+                          placeholder="your@email.com"
+                          value={formData.email}
+                          onChange={(e) => handleInputChange('email', e.target.value)}
+                          className="mt-1"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="projectDetails">Project Details</Label>
+                        <Textarea
+                          id="projectDetails"
+                          placeholder="Tell us about your project (optional)"
+                          value={formData.notes}
+                          onChange={(e) => handleInputChange('notes', e.target.value)}
+                          className="mt-1"
+                          rows={4}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {contactMethod === 'callback' && (
+                  <div className="mt-6 p-6 bg-blue-50 rounded-xl border border-blue-100">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Request a Callback</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <Label htmlFor="callbackName">Your Name</Label>
+                        <Input
+                          id="callbackName"
+                          placeholder="Enter your name"
+                          value={formData.name}
+                          onChange={(e) => handleInputChange('name', e.target.value)}
+                          className="mt-1"
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="callbackPhone">Phone Number</Label>
+                        <Input
+                          id="callbackPhone"
+                          placeholder="(832) 555-0123"
+                          value={formData.phone}
+                          onChange={(e) => handleInputChange('phone', e.target.value)}
+                          className="mt-1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
               <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
-                <h3 className="text-xl font-bold mb-4">Why Choose Blu Touch Pools?</h3>
+                <h3 className="text-xl font-bold mb-4">Why Choose BluTouch Pools & Spas?</h3>
                 <div className="space-y-4">
                   {[
                     'Free, no-obligation quotes',

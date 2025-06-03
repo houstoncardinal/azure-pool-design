@@ -16,7 +16,7 @@ import {
 const service = {
   icon: Droplets,
   title: "Hot Tub Integration",
-  description: "Enhance your backyard oasis and extend your swimming season with seamless hot tub integration services from Blu Touch Pools in Houston. Whether you desire a spillover spa that flows into your pool or a custom-designed separate hot tub, we have the expertise to create a perfectly integrated and luxurious addition to your outdoor space. Enjoy the therapeutic benefits and relaxation that a well-designed hot tub provides, expertly installed by our experienced team.",
+  description: "Enhance your backyard oasis and extend your swimming season with seamless hot tub integration services from BluTouch Pools & Spas in Houston. Whether you desire a spillover spa that flows into your pool or a custom-designed separate hot tub, we have the expertise to create a perfectly integrated and luxurious addition to your outdoor space. Enjoy the therapeutic benefits and relaxation that a well-designed hot tub provides, expertly installed by our experienced team.",
   features: [
     "Custom Spillover Spa Design and Construction",
     "Seamless Integration with Existing or New Pools",
@@ -83,13 +83,12 @@ const HotTubIntegration = () => {
                 Get a Free Quote
               </Link>
             </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-blue-700 hover:bg-white hover:text-blue-700 font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Call (832) 961-0258
+            <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg group" asChild>
+              <a href="tel:8329610258">
+                <Phone className="mr-2 h-5 w-5" />
+                Call (832) 961-0258
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
           </div>
         </div>
@@ -138,7 +137,7 @@ const HotTubIntegration = () => {
                 Adding a hot tub to your property is a fantastic way to enhance your outdoor living experience, providing a dedicated space for relaxation, hydrotherapy, and socializing.
               </p>
               <p>
-                Blu Touch Pools specializes in seamlessly integrating hot tubs with new or existing pools, creating a cohesive and luxurious backyard environment in Houston. Whether you envision a classic spillover spa or a custom stand-alone unit, we design and build solutions that meet your specific needs and aesthetic preferences.
+                BluTouch Pools & Spas specializes in seamlessly integrating hot tubs with new or existing pools, creating a cohesive and luxurious backyard environment in Houston. Whether you envision a classic spillover spa or a custom stand-alone unit, we design and build solutions that meet your specific needs and aesthetic preferences.
               </p>
             </div>
 
@@ -156,7 +155,7 @@ const HotTubIntegration = () => {
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <p className="mb-4">
-                Investing in hot tub integration with Blu Touch Pools means investing in years of relaxation and enjoyment.
+                Investing in hot tub integration with BluTouch Pools & Spas means investing in years of relaxation and enjoyment.
               </p>
               <p>
                 We are committed to delivering a high-quality product and a smooth installation experience, providing you with a beautiful and functional hot tub that enhances your backyard oasis.
@@ -195,13 +194,11 @@ const HotTubIntegration = () => {
                   Get Your Free Estimate
                 </Link>
               </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-blue-700 hover:bg-white hover:text-blue-700 font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Call (832) 961-0258
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white group-hover:shadow-lg transition-all duration-300" asChild>
+                <a href="tel:8329610258">
+                  <Phone className="w-4 h-4 mr-2" />
+                  (832) 961-0258
+                </a>
               </Button>
             </div>
           </div>

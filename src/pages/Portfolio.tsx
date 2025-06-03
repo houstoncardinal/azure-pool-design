@@ -38,7 +38,7 @@ export const projects = [
     id: 'robinson-family-project',
     title: 'Robinson Family Project',
     location: 'Houston, TX',
-    image: '/robinson-pool.jpg',
+    image: '/robinson1.jpg',
     description: 'A modern pool design for the Robinson family, featuring a seamless integration with their outdoor living space.'
   },
   {
@@ -59,15 +59,15 @@ export const projects = [
     id: 'tems-family-project',
     title: 'Tems Family Project',
     location: 'Houston, TX',
-    image: '/tems-family-pool.jpg',
+    image: '/tems2.jpg',
     description: 'A sophisticated pool design for the Tems family, featuring modern aesthetics and seamless integration with their outdoor living space.'
   },
   {
-    id: 'myer-family-project',
-    title: 'Myer Family Project',
+    id: 'myers-family-project',
+    title: 'Myers Family Project',
     location: 'Alvin, TX',
-    image: '/myer-family-pool.jpg',
-    description: 'An exceptional pool design for the Myer family, featuring premium materials and sophisticated entertainment features.'
+    image: '/myers1.jpg',
+    description: 'An exceptional pool design for the Myers family, featuring premium materials and sophisticated entertainment features.'
   }
 ];
 

@@ -45,9 +45,9 @@ const RobinsonFamilyProject = () => {
       'Year-Round Enjoyment'
     ],
     images: [
-      '/robinson-family-pool.jpg',
-      'https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
-      'https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
+      '/robinson1.jpg',
+      '/robinson2.jpg',
+      '/robinson3.jpg'
     ]
   };
 
@@ -154,7 +154,6 @@ const RobinsonFamilyProject = () => {
                   </Link>
                 </Button>
                 <Button 
-                  variant="outline"
                   className="border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-6"
                 >
                   <Phone className="mr-2 h-5 w-5" />

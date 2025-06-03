@@ -23,7 +23,7 @@ const Hero = () => {
               <span className="block text-blue-600">Blu Touch Difference</span>
             </h1>
             
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">Blu Touch Pools has an amazing team of designers, technicians, and craftsmen that will guide you through the process of creating your own luxury pool design. </p>
+            <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl">BluTouch Pools & Spas has an amazing team of designers, technicians, and craftsmen that will guide you through the process of creating your own luxury pool design. </p>
 
             {/* Key Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
@@ -47,11 +47,15 @@ const Hero = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group" asChild>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-2 border-gray-200 text-gray-700 hover:bg-gray-50 px-8 py-4 text-lg font-semibold rounded-lg group"
+                asChild
+              >
                 <a href="tel:8329610258">
                   <Phone className="mr-2 h-5 w-5" />
                   Call (832) 961-0258
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg group" asChild>
@@ -74,7 +78,7 @@ const Hero = () => {
             <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
               <img src="/brown-family-pool.jpg" alt="Luxury swimming pool" className="w-full h-64 object-cover rounded-xl mb-6" />
               
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Why Choose Blu Touch Pools?</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Why Choose BluTouch Pools & Spas?</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">

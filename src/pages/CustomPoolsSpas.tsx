@@ -16,7 +16,7 @@ import {
 const service = {
   icon: Waves,
   title: "Custom Pools & Spas",
-  description: "Transform your backyard into a breathtaking retreat with a custom pool and spa designed and built by Blu Touch Pools. We specialize in creating unique aquatic masterpieces that perfectly complement your home's architecture and your personal style. From initial consultation and innovative 3D design to meticulous construction and final touches, our expert team in Houston ensures a seamless and enjoyable process. We use high-quality materials and the latest building techniques to deliver a durable, beautiful, and luxurious swimming environment tailored specifically for you.",
+  description: "Transform your backyard into a breathtaking retreat with a custom pool and spa designed and built by BluTouch Pools & Spas. We specialize in creating unique aquatic masterpieces that perfectly complement your home's architecture and your personal style. From initial consultation and innovative 3D design to meticulous construction and final touches, our expert team in Houston ensures a seamless and enjoyable process. We use high-quality materials and the latest building techniques to deliver a durable, beautiful, and luxurious swimming environment tailored specifically for you.",
   features: [
     "Personalized 3D Pool Design in Houston", // SEO Keyword
     "Comprehensive Site Evaluation and Consultation",
@@ -64,7 +64,7 @@ const CustomPoolsSpas = () => {
           </h1>
           <div className="max-w-3xl mx-auto space-y-4">
             <p className="text-base sm:text-lg lg:text-xl text-blue-100 leading-relaxed">
-              Transform your backyard into a breathtaking retreat with a custom pool and spa designed and built by Blu Touch Pools.
+              Transform your backyard into a breathtaking retreat with a custom pool and spa designed and built by BluTouch Pools & Spas.
             </p>
             <p className="text-base sm:text-lg lg:text-xl text-blue-100 leading-relaxed">
               We specialize in creating unique aquatic masterpieces that perfectly complement your home's architecture and your personal style.
@@ -86,13 +86,12 @@ const CustomPoolsSpas = () => {
                 Get a Free Quote
               </Link>
             </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-blue-700 hover:bg-white hover:text-blue-700 font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Call (832) 961-0258
+            <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg group" asChild>
+              <a href="tel:8329610258">
+                <Phone className="mr-2 h-5 w-5" />
+                Call (832) 961-0258
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
           </div>
         </div>
@@ -138,7 +137,7 @@ const CustomPoolsSpas = () => {
           <div className="prose prose-lg text-gray-700 mx-auto leading-relaxed space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <p className="mb-4">
-                Building a custom pool is a significant investment, and choosing the right partner is crucial. At Blu Touch Pools, we bring years of experience and a passion for creating stunning, functional, and enduring custom pools and spas across the greater Houston area.
+                Building a custom pool is a significant investment, and choosing the right partner is crucial. At BluTouch Pools & Spas, we bring years of experience and a passion for creating stunning, functional, and enduring custom pools and spas across the greater Houston area.
               </p>
               <p>
                 Our process is collaborative and transparent, ensuring your vision is brought to life with precision and care.
@@ -165,7 +164,7 @@ const CustomPoolsSpas = () => {
                 We help you select the best options to fit your aesthetic preferences and budget, ensuring a cohesive and visually appealing outdoor living space.
               </p>
               <p>
-                With Blu Touch Pools, you're not just getting a pool; you're getting a personalized outdoor retreat designed for years of enjoyment.
+                With BluTouch Pools & Spas, you're not just getting a pool; you're getting a personalized outdoor retreat designed for years of enjoyment.
               </p>
             </div>
           </div>
@@ -190,7 +189,7 @@ const CustomPoolsSpas = () => {
       <section className="py-16 lg:py-24 bg-blue-700 text-white text-center">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Build Your Custom Pool or Spa?</h2>
-            <p className="text-lg text-blue-100 mb-10">Contact Blu Touch Pools today for a personalized consultation and a free estimate. Let us help you create the backyard oasis of your dreams.</p>
+            <p className="text-lg text-blue-100 mb-10">Contact BluTouch Pools & Spas today for a personalized consultation and a free estimate. Let us help you create the backyard oasis of your dreams.</p>
              <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 size="lg"
@@ -201,13 +200,11 @@ const CustomPoolsSpas = () => {
                   Get Your Free Estimate
                 </Link>
               </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-blue-700 hover:bg-white hover:text-blue-700 font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Call (832) 961-0258
+              <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg group" asChild>
+                <a href="tel:8329610258">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call (832) 961-0258
+                </a>
               </Button>
             </div>
           </div>

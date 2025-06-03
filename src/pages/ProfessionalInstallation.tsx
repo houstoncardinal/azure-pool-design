@@ -16,7 +16,7 @@ import {
 const service = {
   icon: Zap,
   title: "Professional Pool Installation",
-  description: "Entrust your pool project to the experienced and professional installation team at Blu Touch Pools in Houston. We manage every phase of the pool installation process with meticulous attention to detail, ensuring a smooth, efficient, and high-quality build from groundbreaking to the final inspection. Our team of skilled craftsmen and technicians are dedicated to bringing your custom pool design to life, adhering to the highest standards of construction and safety.",
+  description: "Entrust your pool project to the experienced and professional installation team at BluTouch Pools & Spas in Houston. We manage every phase of the pool installation process with meticulous attention to detail, ensuring a smooth, efficient, and high-quality build from groundbreaking to the final inspection. Our team of skilled craftsmen and technicians are dedicated to bringing your custom pool design to life, adhering to the highest standards of construction and safety.",
   features: [
     "Experienced and Certified Pool Installation Team",
     "Efficient and Timely Construction Process",
@@ -83,13 +83,12 @@ const ProfessionalInstallation = () => {
                 Get a Free Quote
               </Link>
             </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-blue-700 hover:bg-white hover:text-blue-700 font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Call (832) 961-0258
+            <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg group" asChild>
+              <a href="tel:8329610258">
+                <Phone className="mr-2 h-5 w-5" />
+                Call (832) 961-0258
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
           </div>
         </div>
@@ -135,7 +134,7 @@ const ProfessionalInstallation = () => {
           <div className="prose prose-lg text-gray-700 mx-auto leading-relaxed space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <p className="mb-4">
-                Choosing the right team for your pool installation is as important as the design itself. At Blu Touch Pools, our professional installation services in Houston are built on a foundation of expertise, efficiency, and a commitment to quality.
+                Choosing the right team for your pool installation is as important as the design itself. At BluTouch Pools & Spas, our professional installation services in Houston are built on a foundation of expertise, efficiency, and a commitment to quality.
               </p>
               <p>
                 Our certified installers have years of experience in constructing a wide range of pool types, from intricate custom designs to standard shapes, ensuring every project is completed to the highest standards.
@@ -156,10 +155,10 @@ const ProfessionalInstallation = () => {
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <p className="mb-4">
-                With Blu Touch Pools, you can expect a smooth and well-managed installation process. Our goal is to minimize disruption to your property and complete your project on time and within budget.
+                With BluTouch Pools & Spas, you can expect a smooth and well-managed installation process. Our goal is to minimize disruption to your property and complete your project on time and within budget.
               </p>
               <p>
-                Upon completion, we conduct a thorough final inspection and provide you with all the necessary information on operating and maintaining your new pool. Trust Blu Touch Pools to deliver a professionally installed pool that you and your family will enjoy for decades.
+                Upon completion, we conduct a thorough final inspection and provide you with all the necessary information on operating and maintaining your new pool. Trust BluTouch Pools & Spas to deliver a professionally installed pool that you and your family will enjoy for decades.
               </p>
             </div>
           </div>
@@ -195,13 +194,11 @@ const ProfessionalInstallation = () => {
                   Get Your Free Estimate
                 </Link>
               </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-blue-700 hover:bg-white hover:text-blue-700 font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Call (832) 961-0258
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white group-hover:shadow-lg transition-all duration-300" asChild>
+                <a href="tel:8329610258">
+                  <Phone className="w-4 h-4 mr-2" />
+                  (832) 961-0258
+                </a>
               </Button>
             </div>
           </div>

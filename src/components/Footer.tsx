@@ -16,7 +16,7 @@ const Footer = () => {
                 <span className="text-blue-400">Blu Touch</span> Pools
               </h3>
               <p className="text-gray-300 leading-relaxed mb-6">
-                Houston's Premier Custom Pool Builder. Blu Touch Pools has an amazing team of designers, technicians, and craftsmen that will guide you through the process of creating your own luxury pool design.
+                Houston's Premier Custom Pool Builder. BluTouch Pools & Spas has an amazing team of designers, technicians, and craftsmen that will guide you through the process of creating your own luxury pool design.
               </p>
               
               {/* Service Areas */}
@@ -65,7 +65,7 @@ const Footer = () => {
 
           {/* Contact & CTA */}
           <div>
-            <h4 className="text-lg font-semibold mb-6">Contact Blu Touch Pools</h4>
+            <h4 className="text-lg font-semibold mb-6">Contact BluTouch Pools & Spas</h4>
             
             <div className="space-y-4 mb-6">
               <div className="flex items-center space-x-3">
@@ -122,7 +122,7 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
               <p className="text-gray-400 text-sm">
-                © 2024 Blu Touch Pools. All rights reserved.
+                © 2024 BluTouch Pools & Spas. All rights reserved.
               </p>
               <div className="flex items-center space-x-4 text-sm text-gray-500">
                 <span>Houston's Premier Pool Builder</span>

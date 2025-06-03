@@ -16,7 +16,7 @@ import {
 const service = {
   icon: Sparkles,
   title: "Routine Pool Servicing & Maintenance",
-  description: "Ensure your pool remains sparkling clean, healthy, and properly functioning with professional routine pool servicing and maintenance from Blu Touch Pools in Houston. Our comprehensive service plans are designed to take the hassle out of pool ownership, providing you with peace of mind and more time to enjoy your investment. Our experienced technicians perform thorough cleaning, chemical balancing, equipment checks, and more, tailored to the specific needs of your pool.",
+  description: "Ensure the longevity and pristine condition of your pool with expert routine pool servicing and maintenance from BluTouch Pools & Spas in Houston. Our comprehensive service plans are designed to take the hassle out of pool ownership, providing you with peace of mind and more time to enjoy your investment. Our experienced technicians perform thorough cleaning, chemical balancing, equipment checks, and more, tailored to the specific needs of your pool.",
   features: [
     "Weekly and Bi-Weekly Pool Cleaning Options",
     "Expert Chemical Testing and Balancing",
@@ -64,7 +64,7 @@ const PoolServicing = () => {
           </h1>
           <div className="max-w-3xl mx-auto space-y-4">
             <p className="text-base sm:text-lg lg:text-xl text-blue-100 leading-relaxed">
-              Ensure your pool remains sparkling clean, healthy, and properly functioning with professional routine pool servicing and maintenance from Blu Touch Pools in Houston.
+              Ensure the longevity and pristine condition of your pool with expert routine pool servicing and maintenance from BluTouch Pools & Spas in Houston.
             </p>
             <p className="text-base sm:text-lg lg:text-xl text-blue-100 leading-relaxed">
               Our comprehensive service plans are designed to take the hassle out of pool ownership, providing you with peace of mind and more time to enjoy your investment.
@@ -83,13 +83,12 @@ const PoolServicing = () => {
                 Get a Free Quote
               </Link>
             </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-blue-700 hover:bg-white hover:text-blue-700 font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Call (832) 961-0258
+            <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg font-semibold rounded-lg shadow-lg group" asChild>
+              <a href="tel:8329610258">
+                <Phone className="mr-2 h-5 w-5" />
+                Call (832) 961-0258
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
           </div>
         </div>
@@ -156,7 +155,7 @@ const PoolServicing = () => {
 
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <p className="mb-4">
-                Choosing Blu Touch Pools for your routine servicing means choosing reliability and quality.
+                Choosing BluTouch Pools & Spas for your routine servicing means choosing reliability and quality.
               </p>
               <p>
                 We are dedicated to providing thorough and consistent care, ensuring your pool is always ready for use. Let us handle the maintenance so you can focus on making memories by the poolside.
@@ -184,7 +183,7 @@ const PoolServicing = () => {
       <section className="py-16 lg:py-24 bg-blue-700 text-white text-center">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Schedule Your Pool Servicing?</h2>
-            <p className="text-lg text-blue-100 mb-10">Contact Blu Touch Pools today to set up a regular maintenance plan and enjoy a clean, healthy pool year-round.</p>
+            <p className="text-lg text-blue-100 mb-10">Contact BluTouch Pools & Spas today to set up a regular maintenance plan and enjoy a clean, healthy pool year-round.</p>
              <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 size="lg"
@@ -195,13 +194,11 @@ const PoolServicing = () => {
                   Get Your Free Estimate
                 </Link>
               </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-blue-700 hover:bg-white hover:text-blue-700 font-semibold shadow-lg transition-all duration-300 transform hover:scale-105"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Call (832) 961-0258
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white group-hover:shadow-lg transition-all duration-300" asChild>
+                <a href="tel:8329610258">
+                  <Phone className="w-4 h-4 mr-2" />
+                  (832) 961-0258
+                </a>
               </Button>
             </div>
           </div>
