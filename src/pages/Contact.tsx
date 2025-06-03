@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -252,26 +251,6 @@ const Contact = () => {
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </form>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Map Section */}
-          <div className="mt-12 sm:mt-16">
-            <Card className="border-0 shadow-lg overflow-hidden">
-              <CardContent className="p-0">
-                <div className="aspect-w-16 aspect-h-9">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.1234567890123!2d-95.12345678901234!3d29.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDA3JzI0LjUiTiA5NcKwMDcnMjQuNSJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                    width="100%"
-                    height="450"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="w-full h-[450px]"
-                  ></iframe>
-                </div>
               </CardContent>
             </Card>
           </div>

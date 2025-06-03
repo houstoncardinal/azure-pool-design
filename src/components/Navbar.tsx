@@ -52,8 +52,11 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-2xl font-bold text-gray-900">
-              <span className="text-blue-600">BluTouch</span>
-              <span className="ml-1 font-normal">Pools</span>
+              <img 
+                src="/blutouch-logo.png"
+                alt="BluTouch Pools & Spas Logo"
+                className="h-12 w-auto"
+              />
             </Link>
           </div>
 
@@ -131,9 +134,12 @@ const Navbar = () => {
             </Button>
             <Button 
               className="bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-lg"
+              asChild
             >
-              <Phone className="w-4 h-4 mr-2" />
-              Call Now
+              <a href="tel:8329610258">
+                <Phone className="w-4 h-4 mr-2" />
+                Call Now
+              </a>
             </Button>
           </div>
 
@@ -199,9 +205,11 @@ const Navbar = () => {
                 <Button variant="outline" className="w-full border-blue-600 text-blue-600" asChild>
                   <Link to="/get-quote">Free Quote</Link>
                 </Button>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Call Now
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" asChild>
+                  <a href="tel:8329610258">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call Now
+                  </a>
                 </Button>
               </div>
             </div>

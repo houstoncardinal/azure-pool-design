@@ -32,6 +32,7 @@ import ModernPoolDesigns from './pages/ModernPoolDesigns';
 import HotTubIntegration from './pages/HotTubIntegration';
 import ProfessionalInstallation from './pages/ProfessionalInstallation';
 import JonesFamilyProject from './pages/JonesFamilyProject';
+import MobileToolbar from './components/MobileToolbar';
 
 const queryClient = new QueryClient();
 
@@ -86,6 +87,7 @@ const App = () => (
           <Route path="/hot-tub-integration" element={<HotTubIntegration />} />
           <Route path="/professional-installation" element={<ProfessionalInstallation />} />
         </Routes>
+        <MobileToolbar />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

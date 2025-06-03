@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div>
               <h3 className="text-2xl font-bold mb-4">
-                <span className="text-blue-400">Blu Touch</span> Pools
+                BluTouch Pools & Spas
               </h3>
               <p className="text-gray-300 leading-relaxed mb-6">
                 Houston's Premier Custom Pool Builder. BluTouch Pools & Spas has an amazing team of designers, technicians, and craftsmen that will guide you through the process of creating your own luxury pool design.
@@ -41,12 +41,12 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Our Services</h4>
             <ul className="space-y-3 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Custom Pools & Spas</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Pool Construction</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Upgrades & Repairs</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Pool Servicing</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Routine Maintenance</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Equipment Repair</a></li>
+              <li><Link to="/custom-pools-spas" className="hover:text-white transition-colors">Custom Pools & Spas</Link></li>
+              <li><Link to="/upgrades-repairs" className="hover:text-white transition-colors">Upgrades & Repairs</Link></li>
+              <li><Link to="/pool-servicing" className="hover:text-white transition-colors">Pool Servicing</Link></li>
+              <li><Link to="/modern-pool-designs" className="hover:text-white transition-colors">Modern Pool Designs</Link></li>
+              <li><Link to="/hot-tub-integration" className="hover:text-white transition-colors">Hot Tub Integration</Link></li>
+              <li><Link to="/professional-installation" className="hover:text-white transition-colors">Professional Installation</Link></li>
             </ul>
           </div>
 
@@ -54,12 +54,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Featured Projects</h4>
             <ul className="space-y-3 text-gray-300">
-              <li><a href="#" className="hover:text-white transition-colors">Brown Family Project</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Robinson Family Project</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Rucker Family Project</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">View All Projects</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Client Testimonials</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Project Gallery</a></li>
+              <li><Link to="/portfolio/brown-family-project" className="hover:text-white transition-colors">Brown Family Project</Link></li>
+              <li><Link to="/portfolio/robinson-family-project" className="hover:text-white transition-colors">Robinson Family Project</Link></li>
+              <li><Link to="/portfolio/rucker-family-project" className="hover:text-white transition-colors">Rucker Family Project</Link></li>
+              <li><Link to="/portfolio" className="hover:text-white transition-colors">View All Projects</Link></li>
             </ul>
           </div>
 
