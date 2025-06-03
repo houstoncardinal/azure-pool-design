@@ -14,6 +14,7 @@ import {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [areServicesOpen, setAreServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -161,23 +162,39 @@ const Navbar = () => {
               {navItems.map((item) => (
                 item.name === 'Services' ? (
                   <div key={item.name} className="space-y-1">
-                    <Link
-                      to="/services"
-                      className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      All Services
-                    </Link>
-                    {serviceItems.map((service) => (
+                    {/* Services Header with Toggle and Link */}
+                    <div className="flex items-center justify-between">
                       <Link
-                        key={service.name}
-                        to={service.href}
-                        className="block px-8 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
-                        onClick={() => setIsOpen(false)}
+                        to="/services"
+                        className="flex-1 px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
+                        onClick={() => setIsOpen(false)} // Close menu on navigation
                       >
-                        {service.name}
+                        Services
                       </Link>
-                    ))}
+                      <button
+                        onClick={() => setAreServicesOpen(!areServicesOpen)}
+                        className="p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+                        aria-label="Toggle Services Submenu"
+                      >
+                        <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${areServicesOpen ? 'rotate-180' : 'rotate-0'}`} />
+                      </button>
+                    </div>
+                    
+                    {/* Collapsible Service Items (excluding All Services) */}
+                    {areServicesOpen && (
+                      <div className="space-y-1 pl-4">
+                        {serviceItems.map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            className="block px-8 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-colors rounded-lg font-medium"
+                            onClick={() => setIsOpen(false)} // Close menu on navigation
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ) : (
                   item.href.startsWith('/') ? (
