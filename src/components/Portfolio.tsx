@@ -2,6 +2,7 @@ import React from 'react';
 import { ExternalLink, MapPin, Star, Award, ArrowRight, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
   const projects = [
@@ -184,16 +185,22 @@ const Portfolio = () => {
             <Button 
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 font-semibold group"
+              asChild
             >
-              Contact Us Today
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <Link to="/contact">
+                Contact Us Today
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
             <Button 
               size="lg"
               variant="outline" 
               className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 font-semibold"
+              asChild
             >
-              Free Estimate
+              <Link to="/get-quote">
+                Free Estimate
+              </Link>
             </Button>
           </div>
         </div>

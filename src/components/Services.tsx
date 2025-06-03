@@ -218,12 +218,14 @@ const Services = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Button 
-              className="border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-6"
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg group"
               asChild
             >
               <a href="tel:8329610258">
                 <Phone className="mr-2 h-5 w-5" />
                 Call (832) 961-0258
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
             <Button 
