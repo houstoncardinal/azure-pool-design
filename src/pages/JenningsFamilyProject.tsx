@@ -45,9 +45,9 @@ const JenningsFamilyProject = () => {
       'Year-Round Enjoyment'
     ],
     images: [
-      '/jennings-family-pool.jpg',
-      'https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
-      'https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
+      '/jennings1.jpg',
+      '/jennings2.jpg',
+      '/jennings3.jpg',
     ]
   };
 
