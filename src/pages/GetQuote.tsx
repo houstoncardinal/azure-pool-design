@@ -9,6 +9,7 @@ import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useQuoteForm } from '@/hooks/useFormSubmissions';
+import { toast } from 'sonner';
 
 const GetQuote = () => {
   const { submitQuote, isLoading } = useQuoteForm();
@@ -45,36 +46,61 @@ const GetQuote = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const result = await submitQuote({
-      name: formData.name,
-      email: formData.email,
-      phone: formData.phone,
-      address: formData.address,
-      project_type: formData.projectType,
-      pool_size: formData.poolSize,
-      features: formData.features,
-      timeline: formData.timeline,
-      notes: formData.notes,
-      contact_method: contactMethod,
-      preferred_callback_time: contactMethod === 'callback' ? formData.preferredCallbackTime : undefined
-    });
-    
-    if (result.success) {
-      // Reset form
-      setFormData({
-        projectType: '',
-        poolSize: '',
-        features: [],
-        notes: '',
-        name: '',
-        email: '',
-        phone: '',
-        preferredCallbackTime: '',
-        address: '',
-        timeline: ''
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    // Add contact method and preferred callback time to form data
+    formData.append('contactMethod', contactMethod);
+    if (contactMethod === 'callback' && formData.get('preferredCallbackTime')) {
+       formData.append('preferredCallbackTime', formData.get('preferredCallbackTime') as string);
+    } else {
+      formData.delete('preferredCallbackTime'); // Remove if not callback or not selected
+    }
+
+    // Handle features which are checkboxes - FormData might not handle arrays well
+    // Collect checked features manually
+    const selectedFeatures = Array.from(form.elements).filter(element => 
+      (element as HTMLInputElement).name === 'features' && (element as HTMLInputElement).checked
+    ).map(element => (element as HTMLInputElement).value);
+    // Remove individual 'features' entries added by FormData for unchecked boxes and add the collected array
+    formData.delete('features');
+    formData.append('features', selectedFeatures.join(', ')); // Join features with comma for single field
+
+
+    try {
+      const response = await fetch('/', { // Netlify intercepts POST to /
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
       });
-      setFormStep(1);
-      setContactMethod('phone');
+
+      if (response.ok) {
+        toast.success('Quote request submitted successfully!');
+        // Reset form
+        setFormData({
+          projectType: '',
+          poolSize: '',
+          features: [],
+          notes: '',
+          name: '',
+          email: '',
+          phone: '',
+          preferredCallbackTime: '',
+          address: '',
+          timeline: ''
+        });
+        setFormStep(1);
+        setContactMethod('phone');
+      } else {
+         // Attempt to parse response body for errors if not OK
+         const errorText = await response.text();
+         console.error('Form submission failed:', response.status, errorText);
+         toast.error(`Form submission failed: ${response.status} ${errorText.substring(0, 100)}...`);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error('An error occurred during form submission.');
     }
   };
 
@@ -304,7 +330,7 @@ const GetQuote = () => {
                 </div>
               </div>
 
-              <form name="get-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <form name="get-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
                 <input type="hidden" name="form-name" value="get-quote" />
                 <div className="hidden">
                   <label>Don't fill this out if you're human: <input name="bot-field" /></label>

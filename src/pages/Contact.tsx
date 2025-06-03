@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useContactForm } from '@/hooks/useFormSubmissions';
+import { toast } from 'sonner';
 import { 
   Phone, 
   Mail, 
@@ -29,15 +30,36 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const result = await submitContact(formData);
-    if (result.success) {
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('/', { // Netlify intercepts POST to /
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
       });
+
+      if (response.ok) {
+        toast.success('Message sent successfully!');
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+         // Attempt to parse response body for errors if not OK
+         const errorText = await response.text();
+         console.error('Form submission failed:', response.status, errorText);
+         toast.error(`Form submission failed: ${response.status} ${errorText.substring(0, 100)}...`);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error('An error occurred during form submission.');
     }
   };
 
@@ -168,7 +190,7 @@ const Contact = () => {
             <Card className="border-0 shadow-lg">
               <CardContent className="p-6 sm:p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" className="space-y-6">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" className="space-y-6" onSubmit={handleSubmit}>
                   <input type="hidden" name="form-name" value="contact" />
                   <div className="hidden">
                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
