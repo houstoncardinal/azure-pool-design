@@ -19,6 +19,26 @@ const MobileToolbar = () => {
         <span className="text-xs mt-1">Home</span>
       </Link>
 
+      {/* Quote Button */}
+      <Link 
+        to="/get-quote"
+        className={`flex flex-col items-center justify-center p-3 text-gray-700 hover:text-blue-600 transition-colors ${isActive('/get-quote') ? 'text-blue-600 font-semibold' : ''}`}
+      >
+        <Calendar className={`w-7 h-7 ${isActive('/get-quote') ? 'text-blue-600' : 'text-gray-700'}`} />
+        <span className="text-xs mt-1">Quote</span>
+      </Link>
+
+      {/* Financing Button */}
+      <a 
+        href="https://www.hfsfinancial.net/promo/blutouchpoolservice/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex flex-col items-center justify-center p-3 text-gray-700 hover:text-blue-600 transition-colors"
+      >
+        <DollarSign className="w-7 h-7 text-gray-700 group-hover:text-blue-600" />
+        <span className="text-xs mt-1">Finance</span>
+      </a>
+
       {/* Call Button */}
       <a 
         href="tel:8329610258"
@@ -36,26 +56,6 @@ const MobileToolbar = () => {
         <Mail className="w-7 h-7 text-gray-700 group-hover:text-blue-600" />
         <span className="text-xs mt-1">Email</span>
       </a>
-
-      {/* Financing Button */}
-      <a 
-        href="https://www.hfsfinancial.net/promo/blutouchpoolservice/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex flex-col items-center justify-center p-3 text-gray-700 hover:text-blue-600 transition-colors"
-      >
-        <DollarSign className="w-7 h-7 text-gray-700 group-hover:text-blue-600" />
-        <span className="text-xs mt-1">Finance</span>
-      </a>
-
-      {/* Quote Button */}
-      <Link 
-        to="/get-quote"
-        className={`flex flex-col items-center justify-center p-3 text-gray-700 hover:text-blue-600 transition-colors ${isActive('/get-quote') ? 'text-blue-600 font-semibold' : ''}`}
-      >
-        <Calendar className={`w-7 h-7 ${isActive('/get-quote') ? 'text-blue-600' : 'text-gray-700'}`} />
-        <span className="text-xs mt-1">Quote</span>
-      </Link>
     </div>
   );
 };
