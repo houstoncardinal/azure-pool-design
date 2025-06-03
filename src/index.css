@@ -199,6 +199,19 @@
   }
 }
 
+/* New Keyframes for Hero Background Animation */
+@keyframes subtle-water-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* Premium Animations */
 @keyframes fade-in-up {
   0% {
