@@ -17,7 +17,7 @@ export const projects = [
     id: 'phillips-family-project',
     title: 'Phillips Family Project',
     location: 'Pearland, TX',
-    image: '/phillips-family-pool.jpg',
+    image: '/phillips1.jpg',
     description: 'Modern pool design with integrated smart features.'
   },
   {

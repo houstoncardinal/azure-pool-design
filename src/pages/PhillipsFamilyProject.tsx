@@ -45,9 +45,8 @@ const PhillipsFamilyProject = () => {
       'Smart Home Integration'
     ],
     images: [
-      '/phillips-family-pool.jpg',
-      'https://images.unsplash.com/photo-1563301256-ac130e4a90dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
-      'https://images.unsplash.com/photo-1600441326915-30158925838d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Placeholder image
+      '/phillips1.jpg',
+      '/phillips2.jpg',
     ]
   };
 
