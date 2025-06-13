@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,6 +11,7 @@ import ContentExtractor from "./pages/ContentExtractor";
 import GetQuote from "./pages/GetQuote";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import Finance from "./pages/Finance";
 import Portfolio from './pages/Portfolio';
 import PhillipsFamilyProject from './pages/PhillipsFamilyProject';
 import BlountFamilyProject from './pages/BlountFamilyProject';
@@ -63,6 +65,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/get-quote" element={<GetQuote />} />
+          <Route path="/finance" element={<Finance />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/jones-family-project" element={<JonesFamilyProject />} />
           <Route path="/portfolio/phillips-family-project" element={<PhillipsFamilyProject />} />
