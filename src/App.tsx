@@ -56,6 +56,7 @@ const ScrollToTop = () => {
 
 const App = () => (
   <HelmetProvider>
+    {/* Updated: June 12, 2025 - Finance page integration */}
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
