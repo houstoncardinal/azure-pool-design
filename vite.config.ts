@@ -9,9 +9,6 @@ export default defineConfig(({ mode }) => ({
     port: 3002,
     host: true,
     strictPort: true,
-    headers: {
-      'Content-Type': 'application/javascript',
-    },
   },
   plugins: [
     react(),
