@@ -29,15 +29,13 @@ const MobileToolbar = () => {
       </Link>
 
       {/* Financing Button */}
-      <a 
-        href="https://www.hfsfinancial.net/promo/blutouchpoolservice/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex flex-col items-center justify-center p-3 text-gray-700 hover:text-blue-600 transition-colors"
+      <Link 
+        to="/finance"
+        className={`flex flex-col items-center justify-center p-3 text-gray-700 hover:text-blue-600 transition-colors ${isActive('/finance') ? 'text-blue-600 font-semibold' : ''}`}
       >
-        <DollarSign className="w-7 h-7 text-gray-700 group-hover:text-blue-600" />
+        <DollarSign className={`w-7 h-7 ${isActive('/finance') ? 'text-blue-600' : 'text-gray-700'}`} />
         <span className="text-xs mt-1">Finance</span>
-      </a>
+      </Link>
 
       {/* Call Button */}
       <a 

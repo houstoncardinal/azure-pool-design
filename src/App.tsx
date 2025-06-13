@@ -36,6 +36,7 @@ import JonesFamilyProject from './pages/JonesFamilyProject';
 import MobileToolbar from './components/MobileToolbar';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import Finance from './pages/Finance';
 
 const queryClient = new QueryClient();
 
@@ -67,6 +68,7 @@ const App = () => (
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/get-quote" element={<GetQuote />} />
+            <Route path="/finance" element={<Finance />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/portfolio/jones-family-project" element={<JonesFamilyProject />} />
             <Route path="/portfolio/phillips-family-project" element={<PhillipsFamilyProject />} />
