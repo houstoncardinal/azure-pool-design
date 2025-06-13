@@ -1,14 +1,14 @@
-# Allow all crawlers
-User-agent: *
+User-agent: Googlebot
 Allow: /
 
-# Sitemap location
-Sitemap: https://www.blutouchpools.com/sitemap.xml
+User-agent: Bingbot
+Allow: /
 
-# Disallow admin and private routes
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
+User-agent: Twitterbot
+Allow: /
 
-# Crawl-delay for all bots
-Crawl-delay: 10
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /

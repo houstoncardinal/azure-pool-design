@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -5,7 +6,6 @@ import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import Testimonials from '../components/Testimonials';
 
 const Index = () => {
   return (
@@ -14,7 +14,6 @@ const Index = () => {
       <Hero />
       <Services />
       <Portfolio />
-      <Testimonials />
       <Contact />
       <Footer />
     </div>

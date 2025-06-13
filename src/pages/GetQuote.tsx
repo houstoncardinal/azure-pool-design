@@ -10,7 +10,6 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useQuoteForm } from '@/hooks/useFormSubmissions';
 import { toast } from 'sonner';
-import { Link } from 'react-router-dom';
 
 const GetQuote = () => {
   const { submitQuote, isLoading } = useQuoteForm();
@@ -649,11 +648,9 @@ const GetQuote = () => {
                 <p className="text-gray-600 mb-6">
                   Speak with our pool experts for immediate assistance
                 </p>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white group-hover:shadow-lg transition-all duration-300" asChild>
-                  <a href="tel:8329610258">
-                    <Phone className="w-4 h-4 mr-2" />
-                    (832) 961-0258
-                  </a>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white group-hover:shadow-lg transition-all duration-300">
+                  <Phone className="w-4 h-4 mr-2" />
+                  (832) 961-0258
                 </Button>
               </div>
             </div>
@@ -668,11 +665,9 @@ const GetQuote = () => {
                 <p className="text-gray-600 mb-6">
                   Send us your detailed requirements for a comprehensive response
                 </p>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white group-hover:shadow-lg transition-all duration-300" asChild>
-                  <a href="mailto:gary@blutouchpools.com">
-                    <Mail className="w-4 h-4 mr-2" />
-                    gary@blutouchpools.com
-                  </a>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white group-hover:shadow-lg transition-all duration-300">
+                  <Mail className="w-4 h-4 mr-2" />
+                  gary@blutouchpools.com
                 </Button>
               </div>
             </div>
@@ -681,17 +676,15 @@ const GetQuote = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative">
                 <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <MessageSquare className="w-8 h-8 text-blue-600" />
+                  <MapPin className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Contact Us</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Visit Us</h3>
                 <p className="text-gray-600 mb-6">
-                  Visit our contact page for more ways to reach us
+                  Schedule a personalized consultation at our showroom
                 </p>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white group-hover:shadow-lg transition-all duration-300" asChild>
-                  <Link to="/contact">
-                    <MessageSquare className="w-4 h-4 mr-2" />
-                    Contact Page
-                  </Link>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white group-hover:shadow-lg transition-all duration-300">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  Get Directions
                 </Button>
               </div>
             </div>
