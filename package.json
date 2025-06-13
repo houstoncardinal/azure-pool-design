@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 3001",
+    "dev": "vite --port 3002 --host",
     "build": "ts-node src/utils/generateSitemap.ts && vite build",
     "build:dev": "ts-node src/utils/generateSitemap.ts && vite build --mode development",
     "lint": "eslint .",
